@@ -4,3 +4,4 @@ This repository contains code for an interactive information web app, created fo
 Halle Hwang
 Sarah Haworth
 Keyan Ying
+Yaqi Lu
