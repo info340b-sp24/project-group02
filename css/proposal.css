@@ -44,3 +44,7 @@ h3+p{
 p{
     text-indent: 2em;
 }
+
+.bold {
+    font-weight: bold;
+}
