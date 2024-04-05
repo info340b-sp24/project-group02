@@ -6,3 +6,36 @@ body {
 .authors {
     font-size: 12px;
 }
+
+header{
+    background-color:rgb(230, 206, 248);
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+
+}
+
+.container{
+    text-align: center;
+}
+
+.Problem-Description{
+    background-color: rgb(192, 242, 255);
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+
+}
+.Proposed-Application{
+    background-color: rgb(204, 231, 255);
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+h3{
+    text-indent: 1em;
+}
+h3+p{
+    text-indent: 2em;
+}
