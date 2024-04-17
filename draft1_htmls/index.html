@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="../css/style.css" >
 </head>
-<body class="ms-2">
+<body>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -49,15 +49,15 @@
     </nav>
 
     <div class="container-fluid">
-      <p class="mb-0">Find activites:</p>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button type="button" class="btn btn-outline-dark">Filter By</button>
+        <input class="form-control m-2" type="search" placeholder="Search..." aria-label="Search">
+        <button class="btn btn-outline-dark" type="submit">Search</button>
       </form>
     </div>
 
-    <h2>Activities Available Near You</h2>
     <div class="container">
+      <h2>Suggested</h2>
       <div class="row">
         <!-- card 1 -->
         <div class="col-md-6 col-lg-3 d-flex">
@@ -66,7 +66,7 @@
             <div class="card-body">
               <h3 class="card-title m-0">Biking On The Burke Gilman</h3>
               <p class="card-text">4/21 | 11 am</p>
-              <a href="#" class="btn btn-primary">Sign Up</a>
+              <a href="#" class="btn btn-outline-primary">More Details</a>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@
             <div class="card-body">
               <h3 class="card-title m-0">Hiking Mt. Rainer</h3>
               <p class="card-text">4/19 | 9 am</p>
-              <a href="#" class="btn btn-primary">Sign Up</a>
+              <a href="#" class="btn btn-outline-primary">More Details</a>
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@
             <div class="card-body">
               <h3 class="card-title m-0">Costco Run</h3>
               <p class="card-text">4/23 | 2 pm</p>
-              <a href="#" class="btn btn-primary">Sign Up</a>
+              <a href="#" class="btn btn-outline-primary">More Details</a>
             </div>
           </div>
         </div>
@@ -105,7 +105,12 @@
       </div>
     </div>
 
-    <h2>Want some recommendations?</h2>
-    <p>Fill out this <a href="rec-form.html">form</a> to get personalized recommendations based on your interests!</p>
+    <div class="container">
+      <h2>Your Activities</h2>
+      <p>No Upcoming Activities</p>
+    </div>
+
+    <h2>Want to add your own activity?</h2>
+    <p>Fill out this <a href="rec-form.html">form</a></p>
 
 </body>
