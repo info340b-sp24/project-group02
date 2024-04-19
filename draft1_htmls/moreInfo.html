@@ -15,10 +15,30 @@
 </head>
 
 <body class="container">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-1 fw-bold" href="#">UW Ride With Friends</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="activity.html">My Activity</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rec-form.html">Create An Activity</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
     <header class="container-fluid text-black bg-light">
-        <div class="container">
-            <h1>More Info</h1>
-        </div>
+      <h2>Activity Details</h2>
     </header>
 
 
@@ -54,36 +74,30 @@
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>
       </ul> -->
-
+<!-- 
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Steven's Pass" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        <!-- <button type="button" class="btn btn-outline-dark">Filter By</button> -->
-      </form>
+        <button type="button" class="btn btn-outline-dark">Filter By</button> -->
+      <!-- </form>
     </div>
     </div>
-  </nav>
+  </nav> -->
 
 
   <main>
     <div class="container">
+      <div class="card-body">
+        <div class="col-sm-auto col-xl-12">
+          <img src="../img/snowboard.jpeg" alt="walking club" class="pb-3 img-fluid img-thumbnail">
+        </div>
+        <div class="col-sm">
+          <p class="card-subtitle text-success"> Sunday, April 21 at 7am</p>
+          <h2 class="card-title">Ski/Snowboard at Stevens</h2>
+          <p class="card-text">Hit the slopes and meet new friends! Must bring your own gear! </p>
+          <p class="card-text">We'll meet on campus at 7am-- location will be sent after sign ups close. Sign ups close when full or on Saturday, April 20th, at 6pm.</p>
 
-        <!-- Card 4 -->
-            <div class="card-body">
-                <div class="col-sm-auto col-xl-12">
-                  <img src="../img/snowboard.jpeg" alt="walking club" class="pb-3 img-fluid img-thumbnail">
-                </div>
-                <div class="col-sm">
-                    <h6 class="card-subtitle text-success"> Sunday, April 21 at 7am</h6>
-                  <h2 class="card-title">Ski/Snowboard at Stevens</h2>
-                  <p class="card-text">Hit the slopes and meet new friends! Must bring your own gear! </p>
-                  <p class="card-text">We'll meet on campus at 7am-- location will be sent after sign ups close. Sign ups close when full or on Saturday, April 20th, at 6pm.</p>
-
-                  <a href="#" class="btn btn-dark">Sign Up</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <a href="activity-signup.html" class="btn btn-dark mb-4">Sign Up</a>
         </div>
       </div>
     </div>

@@ -13,45 +13,32 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand fs-1 fw-bold" href="#">UW Ride With Friends</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Link
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="index.html">Home</a></li>
-                <li><a class="dropdown-item" href="about.html">About</a></li>
-                <li><a class="dropdown-item" href="community.html">Community Forum</a></li>
-                <li><a class="dropdown-item" href="messages.html">Messages</a></li>
-                <li><a class="dropdown-item" href="favorites.html">Favorites</a></li>
-                <li><a class="dropdown-item" href="#">Sign Up/Log In</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Link</a>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-1 fw-bold" href="#">UW Ride With Friends</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="activity.html">My Activity</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rec-form.html">Create An Activity</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
     <div class="container-fluid">
       <form class="d-flex" role="search">
         <button type="button" class="btn btn-outline-dark">Filter By</button>
-        <input class="form-control m-2" type="search" placeholder="Search..." aria-label="Search">
+        <input class="form-control m-2" type="search" placeholder="Search Activities" aria-label="Search">
         <button class="btn btn-outline-dark" type="submit">Search</button>
       </form>
     </div>
@@ -60,24 +47,26 @@
       <h2>Suggested</h2>
       <div class="row">
         <!-- card 1 -->
-        <div class="col-md-6 col-lg-3 d-flex">
+        <div class="col-md-6 col-lg-3 d-flex sizing">
           <div class="card mb-4">
             <img class="card-img" src="../img/biking.jpg">
             <div class="card-body">
-              <h3 class="card-title m-0">Biking On The Burke Gilman</h3>
-              <p class="card-text">4/21 | 11 am</p>
+              <p class="card-subtitle text-success">Sunday, April 21 at 11am</p>
+              <h2 class="card-title m-0">Biking On The Burke Gilman</h2>
+              <p class="card-text">Take a scenic bike ride with new friends along the Burke Gilman!</p>
               <a href="#" class="btn btn-outline-primary">More Details</a>
             </div>
           </div>
         </div>
 
         <!-- card 2 -->
-        <div class="col-md-6 col-lg-3 d-flex">
+        <div class="col-md-6 col-lg-3 d-flex sizing">
           <div class="card mb-4">
             <img class="card-img" src="../img/hiking.jpg">
             <div class="card-body">
-              <h3 class="card-title m-0">Hiking Mt. Rainer</h3>
-              <p class="card-text">4/19 | 9 am</p>
+              <p class="card-subtitle text-success">Friday, April 19th at 9am</p>
+              <h2 class="card-title m-0">Hiking Mt. Rainer</h2>
+              <p class="card-text">Join us for an unforgettable adventure as we hike Mt. Rainier this weekend—let's conquer the summit together!</p>
               <a href="#" class="btn btn-outline-primary">More Details</a>
             </div>
           </div>
@@ -88,8 +77,9 @@
           <div class="card mb-4">
             <img class="card-img" src="../img/costco.jpg">
             <div class="card-body">
-              <h3 class="card-title m-0">Costco Run</h3>
-              <p class="card-text">4/23 | 2 pm</p>
+              <p class="card-subtitle text-success">Tuesday, April 23rd at 2pm</p>
+              <h2 class="card-title m-0">Costco Run</h2>
+              <p class="card-text">Get a ride to Costco with new friends to pick up some groceries!</p>
               <a href="#" class="btn btn-outline-primary">More Details</a>
             </div>
           </div>

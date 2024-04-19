@@ -10,6 +10,29 @@
   <link href="../css/activity.css" rel="stylesheet">
 </head>
 <body class="container">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-1 fw-bold" href="#">UW Ride With Friends</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="activity.html">My Activity</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rec-form.html">Create An Activity</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
     <header class="container-fluid text-black bg-light py-3">
         <div class="container">
             <h1 class="text-center">My Activity</h1>
@@ -54,59 +77,41 @@
     <!-- Content of the page -->
     <main>
       <div class="container">
-        <h2 class="text-center my-4">Activities I've Registered For</h2>
+        <h2 class="text-center">Activities I've Registered For</h2>
         <div class="row">
           <!-- Card 1 for Activities I've Registered For -->
-          <div class="col-md-6 col-xl-3 d-flex p-2 bd-highlight">
+          <div class="col-md-6 col-lg-3 d-flex">
             <div class="card mb-4">
+              <img class="card-img" src="../img/hiking2.jpeg" alt="Hiking Mt. Rainier">
               <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-auto col-xl-12">
-                    <img src="../img/hiking2.jpeg" alt="Hiking Mt. Rainier" class="pb-3 img-fluid img-thumbnail">
-                  </div>
-                  <div class="col-sm">
-                    <h6 class="card-subtitle text-success">Friday, April 19 at 9am</h6>
-                    <h2 class="card-title">Hiking Mt. Rainier</h2>
-                    <p class="card-text">Join us for an unforgettable adventure as we hike Mt. Rainier this weekend—let's conquer the summit together!</p>
-                    <a href="#" class="btn btn-outline-primary">More Details</a>
-                  </div>
-                </div>
+                <p class="card-subtitle text-success">Friday, April 19 at 9am</p>
+                <h2 class="card-title m-0">Hiking Mt. Rainier</h2>
+                <p class="card-text">Join us for an unforgettable adventure as we hike Mt. Rainier this weekend—let's conquer the summit together!</p>
+                <a href="#" class="btn btn-outline-primary">More Details</a>
               </div>
             </div>
           </div>
           <!-- Card 2 for Activities I've Registered For -->
-          <div class="col-md-6 col-xl-3 d-flex p-2 bd-highlight">
+          <div class="col-md-6 col-lg-3 d-flex">
             <div class="card mb-4">
+              <img class="card-img" src="../img/snowboard.jpeg" alt="Ski/Snowboard at Stevens">
               <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-auto col-xl-12">
-                    <img src="../img/snowboard.jpeg" alt="Ski/Snowboard at Stevens" class="pb-3 img-fluid img-thumbnail">
-                  </div>
-                  <div class="col-sm">
-                    <h6 class="card-subtitle text-success">Sunday, April 21 at 7am</h6>
-                    <h2 class="card-title">Ski/Snowboard at Stevens</h2>
-                    <p class="card-text">Hit the slopes and meet new friends! Must bring your own gear!</p>
-                    <a href="#" class="btn btn-outline-primary">More Details</a>
-                  </div>
-                </div>
+                <p class="card-subtitle text-success">Sunday, April 21 at 7am</p>
+                <h2 class="card-title">Ski/Snowboard at Stevens</h2>
+                <p class="card-text">Hit the slopes and meet new friends! Must bring your own gear!</p>
+                <a href="#" class="btn btn-outline-primary">More Details</a>
               </div>
             </div>
           </div>
           <!-- Card 3 for Activities I've Registered For -->
-          <div class="col-md-6 col-xl-3 d-flex p-2 bd-highlight">
+          <div class="col-md-6 col-lg-3 d-flex">
             <div class="card mb-4">
+              <img class="card-img" src="../img/sbp.jpeg" alt="Bouldering">
               <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-auto col-xl-12">
-                    <img src="../img/sbp.jpeg" alt="Bouldering" class="pb-3 img-fluid img-thumbnail">
-                  </div>
-                  <div class="col-sm">
-                    <h6 class="card-subtitle text-success">Thursday, April 18 at 6pm</h6>
-                    <h2 class="card-title">Bouldering</h2>
-                    <p class="card-text">Join us at the Seattle Bouldering Project in Fremont!</p>
-                    <a href="#" class="btn btn-outline-primary">More Details</a>
-                  </div>
-                </div>
+                <p class="card-subtitle text-success">Thursday, April 18 at 6pm</p>
+                <h2 class="card-title">Bouldering</h2>
+                <p class="card-text">Join us at the Seattle Bouldering Project in Fremont!</p>
+                <a href="#" class="btn btn-outline-primary">More Details</a>
               </div>
             </div>
           </div>
@@ -115,20 +120,14 @@
         <h2 class="text-center my-4">Activities I've Created</h2>
         <div class="row">
         <!-- Card 1 for Activities I've Created -->
-          <div class="col-md-12 d-flex p-2 bd-highlight">
-            <div class="card mb-4 w-100">
+          <div class="col-md-6 col=lg-3 d-flex">
+            <div class="card mb-4">
+              <img class="card-img" src="../img/walking.jpeg" alt="Walk Around Seattle">
               <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-auto col-xl-12">
-                    <img src="../img/walking.jpeg" alt="Walk Around Seattle" class="pb-3 img-fluid img-thumbnail">
-                  </div>
-                  <div class="col-sm">
-                    <h6 class="card-subtitle text-success">Sunday, April 28 at 10am</h6>
-                    <h2 class="card-title">Walk Around Seattle</h2>
-                    <p class="card-text">Explore Seattle and meet new friends!</p>
-                    <a href="#" class="btn btn-outline-primary">More Details</a>
-                  </div>
-                </div>
+                <p class="card-subtitle text-success">Sunday, April 28 at 10am</p>
+                <h2 class="card-title">Walk Around Seattle</h2>
+                <p class="card-text">Explore Seattle and meet new friends!</p>
+                <a href="#" class="btn btn-outline-primary">More Details</a>
               </div>
             </div>
           </div>
