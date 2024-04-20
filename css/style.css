@@ -1,7 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
 h2 {
     font-size: 1.5rem;
 }
 
+body {
+    font-family:'Courier New', Courier, monospace;
+}
     
+nav {
+    background-color: lavender;
+}
 
-
+h3 {
+    font-size: 0.5rem;
+}
