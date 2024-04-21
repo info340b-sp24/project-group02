@@ -134,9 +134,13 @@ img {
     display: none;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
     nav {
-        background-image: url('../img/purpler-larger-bg.jpg');
+        /* background-image: url('../img/purpler-larger-bg.jpg'); */
+        background-color:hsl(274, 92%, 24%);
+    }
+    .navbar-toggler{
+        background-color: white;
     }
 
     img {
@@ -144,7 +148,7 @@ img {
     }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
     .navbar {
         background-image: url('../img/purpler-larger-bg.jpg');
     }
