@@ -11,9 +11,36 @@ body {
 }
     
 nav {
-    background-color: lavender;
+    background-color: #cf9fff;
 }
 
 h3 {
-    font-size: 0.5rem;
+    font-size: 1rem;
+}
+
+.bottom-spacing {
+    margin-bottom: 1.5em;
+}
+
+.side-spacing {
+    margin-left: .5rem;
+}
+
+.underlined {
+    border-bottom: 1px solid black;
+}
+
+footer {
+    color: white;
+    background-color: #301934;
+}
+
+img {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    img {
+        display: block;
+    }
 }
