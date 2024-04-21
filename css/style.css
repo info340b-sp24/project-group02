@@ -4,10 +4,6 @@
     padding: 0;
 }
 
-/* .navbar-brand {
-    color: #;
-} */
-
 h2 {
     font-size: 1.5rem;
     color: #4b2e83;
@@ -94,12 +90,6 @@ img {
     display: none;
 }
 
-@media (min-width: 768px) {
-    img {
-        display: block;
-    }
-}
-
 form {
     background-color: #fff;
     padding: 2rem;
@@ -139,4 +129,10 @@ ul, ol {
     color: #198754;
     size: 12px;
     font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    img {
+        display: block;
+    }
 }
