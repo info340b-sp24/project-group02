@@ -44,7 +44,7 @@ body {
 }
     
 nav {
-    background-color: #d59fff;
+    background-color:hsl(274, 92%, 24%);
     padding: 1rem 0;
 }
 
@@ -132,20 +132,6 @@ ul, ol {
 
 img {
     display: none;
-}
-
-@media (max-width: 767px) {
-    nav {
-        /* background-image: url('../img/purpler-larger-bg.jpg'); */
-        background-color:hsl(274, 92%, 24%);
-    }
-    .navbar-toggler{
-        background-color: white;
-    }
-
-    img {
-        display: block;
-    }
 }
 
 @media (min-width: 768px) {
