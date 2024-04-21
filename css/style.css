@@ -132,6 +132,10 @@ ul, ol {
 }
 
 @media (min-width: 768px) {
+    nav {
+        background-image: url('img/purple-larger-bg.jpg');
+    }
+
     img {
         display: block;
     }
