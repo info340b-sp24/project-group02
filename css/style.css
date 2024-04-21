@@ -19,6 +19,10 @@ body {
     color: #333;
 }
 
+.navbar-brand {
+    color: white; 
+}
+
 .name_results {
     font-size: 1rem;
     border-radius: 10px;
@@ -41,7 +45,6 @@ body {
     
 nav {
     background-color: #d59fff;
-    /* background-color: hsl(274, 92%, 24%); */
     padding: 1rem 0;
 }
 
@@ -86,10 +89,6 @@ footer {
     text-align: center;
 }
 
-img {
-    display: none;
-}
-
 form {
     background-color: #fff;
     padding: 2rem;
@@ -131,12 +130,43 @@ ul, ol {
     font-weight: bold;
 }
 
+img {
+    display: none;
+}
+
 @media (min-width: 768px) {
     nav {
-        background-image: url('img/purple-larger-bg.jpg');
+        background-image: url('../img/purpler-larger-bg.jpg');
     }
 
     img {
         display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        background-image: url('../img/purpler-larger-bg.jpg');
+    }
+    
+    img {
+        display: block;
+    }
+    .nav-link {
+        padding: 0.3rem;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.2rem; 
+    }
+
+    .card {
+        margin: 5px;
+        padding: 5px; 
+    }
+
+    .button-primary {
+        padding: 0.5rem 1rem;
     }
 }
