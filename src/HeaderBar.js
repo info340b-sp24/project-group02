@@ -5,7 +5,17 @@ export function Header(props) {
         <nav className="navbar navbar-expand-lg bottom-spacing">
             <div className="container-fluid">
                 <h1 className="navbar-brand fs-1 fw-bold">UW Ride With Friends</h1>
-                <a></a>
+                <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                    <li className="nav-item">
+                        <a className="nav-link" href="#/">Home</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#/">My Activity</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#/">Create An Activity</a>
+                    </li>
+                </ul>
                 {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation"</div>>
                     <span className="navbar-toggler-icon"></span>
                 </button>
