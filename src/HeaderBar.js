@@ -5,6 +5,7 @@ export function Header(props) {
         <nav className="navbar navbar-expand-lg bottom-spacing">
             <div className="container-fluid">
                 <h1 className="navbar-brand fs-1 fw-bold">UW Ride With Friends</h1>
+                <a></a>
                 {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation"</div>>
                     <span className="navbar-toggler-icon"></span>
                 </button>
