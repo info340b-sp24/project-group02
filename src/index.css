@@ -33,7 +33,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.result{
+.result {
     margin-left:15px;
     color: gray;
 }
@@ -55,10 +55,11 @@ nav {
     padding: 0.5rem;
 }
 
-.nav-link:hover, .nav-link.active {
-    border-bottom: 3px solid #4b2e83;
+.nav-link:hover, .navbar-nav .nav-link.active {
+    border-bottom: 3px solid gold;
     color: #fff;
 }
+
 
 .navbar {
     border-bottom: 1px solid #ddd;
@@ -77,10 +78,6 @@ h3 {
 
 .bottom-spacing {
     margin-bottom: 1.5em;
-}
-
-.side-spacing {
-    margin-left: .5rem;
 }
 
 .underlined {
@@ -104,11 +101,19 @@ form {
     background-color: white; 
     border: 1px solid #eeeeee; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+    /* height: 300px; */
+    overflow: auto;
 }
 
 .card:hover {
     border-color: #4b2e83;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
 }
 
 ul, ol {
@@ -137,3 +142,31 @@ ul, ol {
 img {
     display: none;
 }
+
+@media (min-width: 768px) {
+    /* .navbar {
+        background-image: url('../img/purpler-larger-bg.jpg');
+    } */
+    
+    img {
+        display: block;
+    }
+    .nav-link {
+        padding: 0.3rem;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.2rem; 
+    }
+
+    .card {
+        margin: 5px;
+        padding: 5px; 
+    }
+
+    .button-primary {
+        padding: 0.5rem 1rem;
+    }
+}
+
