@@ -1,0 +1,16 @@
+[
+    {
+        "date":"Thursday, April 25th at 6pm", 
+        "activity":"Bouldering", 
+        "description":"Join us at the Seattle Bouldering Project in Fremont!",
+        "img":"/img/rock-climbing.jpg",
+        "alt":"person rock climbing indoors"
+    },
+    {
+        "date":"Sunday, April 28th at 10am", 
+        "activity":"Walk Around Seattle", 
+        "description":"Explore Seattle on foot and meet new friends!",
+        "img":"img/walking.jpg",
+        "alt":"person walking on sidewalk"
+    }
+]

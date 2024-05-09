@@ -11,3 +11,10 @@ export function SearchBar(props) {
         </div>
     )
 }
+
+// if (/*search button is pressed*/) {
+//     const currentSearch = 'whatever was entered into search bar';
+//     const results = activity_data.filter(searchObj) => {
+//         return (searchObj.name === currentSearch)
+//     }
+// }
