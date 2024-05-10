@@ -1,6 +1,8 @@
 import React from 'react';
 import {Header} from './HeaderBar.js';
-import * as Home from './HomeComponent.js';
+import {HomePage} from './HomeComponent.js';
+import {MyActivity} from './MyActivityComponent.js';
+import {ActivityDetails} from './ActivityDetailsComponent.js';
 
 
 function App(props) {
@@ -11,7 +13,9 @@ function App(props) {
             </header>
 
             <main>
-                <Home.HomePage/>
+                <HomePage/>
+                {/* {<MyActivity/>} */}
+                {/* {<ActivityDetails/>} */}
             </main>
 
             <footer>

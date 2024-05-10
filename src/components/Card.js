@@ -6,7 +6,7 @@ function Card({activityDetails}) {
     return (
         <div className="col-md-6 col-lg-3 d-flex sizing">
             <div className="card mb-4">
-                <img className="card-img" src={img} alt="people biking" />
+                <img className="card-img" src={img} alt={alt} />
                 <div className="card-body">
                     <p className="card-subtitle text-success">{date}</p>
                     <h2 className="card-title m-0">{activity}</h2>
@@ -18,15 +18,15 @@ function Card({activityDetails}) {
     )
 }
 
-export function Suggested({activities}) {
-    const suggestedList = activities.map((suggestion) => {
-        const element = <Card key={suggestion.activity} activityDetails={suggestion}/>
+export function CardList({activities}) {
+    const cardList = activities.map((card) => {
+        const element = <Card key={card.activity} activityDetails={card}/>
         return element;
     });
 
     return (
         <div className="row">
-            {suggestedList}
+            {cardList}
         </div>
     )
 }
