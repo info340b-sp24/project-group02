@@ -3,6 +3,7 @@ import {Header} from './HeaderBar.js';
 import {HomePage} from './HomeComponent.js';
 import {MyActivity} from './MyActivityComponent.js';
 import {ActivityDetails} from './ActivityDetailsComponent.js';
+import {CreateActivity} from './CreateActivityComponent.js';
 
 
 function App(props) {
@@ -16,6 +17,7 @@ function App(props) {
                 <HomePage/>
                 {/* {<MyActivity/>} */}
                 {/* {<ActivityDetails/>} */}
+                {/* <CreateActivity/> */}
             </main>
 
             <footer>

@@ -7,10 +7,10 @@ export function ActivityDetails(props) {
         <div>
             <div className="container-fluid text-black bg-light">
                 <h1 className="text-center">Activity Details</h1>
-                <div className="row">
-                    <CardList activties={CREATED_ACTIVITIES}/>
-                </div>
             </div>
+            {/* <div className="row">
+                <CardList activties={CREATED_ACTIVITIES}/>
+            </div> */}
         </div>
     )
 }
