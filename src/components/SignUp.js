@@ -33,19 +33,21 @@ export function SignUp(props) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div>
-                <label>Name:</label>
-                <input type='text' value={name} onChange={(event) => setName(event.target.value)} />
+            <div class="bottom-spacing">
+                <label for="name" class="form-label">Name:</label>
+                <input type='text' class="form-control" value={name} onChange={(event) => setName(event.target.value)} />
             </div>
-            <div>
-                <label>Phone Number:</label>
-                <input type='text' value={phoneNum} onChange={(event) => setPhoneNum(event.target.value)} />
+            <div class="bottom-spacing">
+                <label for="phone-number" class="form-label">Phone Number:</label>
+                <input type='text' class="form-control" value={phoneNum} onChange={(event) => setPhoneNum(event.target.value)} />
             </div>
-            <div>
-                <label>Email:</label>
-                <input type='text' value={email} onChange={(event) => setEmail(event.target.value)} />
+            <div class="bottom-spacing">
+                <label for="email" class="form-label">Email:</label>
+                <input type='text' class="form-control" value={email} onChange={(event) => setEmail(event.target.value)} />
             </div>
-            <button type="submit">Submit</button>
+            <div class="bottom-spacing">
+            <button type="submit" class="btn btn-dark mb-4">Submit</button>
+            </div>
         </form>
     )
 };
