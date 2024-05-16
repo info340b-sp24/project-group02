@@ -1,7 +1,7 @@
 import React from 'react';
 import {CardList} from './CardList.js';
 import CREATED_ACTIVITIES from '../data/created_activities.json';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export function ActivityDetails(props) {
     const { name } = useParams();
@@ -29,7 +29,9 @@ export function ActivityDetails(props) {
                         <h2 className="card-title">{activityName}</h2>
                         <p className="card-text">{description}</p>
                         <p className="card-text">{detailInformation}</p>
-                        <a href="activity-signup.html" className="btn btn-dark mb-4">Sign Up</a>
+                        {/* when we press the sign up button, this takes it to the sign up form for that activity */}
+                        <Link to={"/sign-up/" + activityName} className="btn btn-dark mb-4">Sign Up</Link>
+
                     </div>
                 </div>
             </main>
