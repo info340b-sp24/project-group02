@@ -4,20 +4,24 @@
         "activity":"Hiking Mt. Rainier", 
         "description":"Join us for an unforgettable adventure as we hike Mt. Rainier this weekend—let's conquer the summit together!",
         "img":"/img/hiking.jpg",
-        "alt":"people hiking"
+        "alt":"people hiking",
+        "type":"Hike"
+
     },
     {
         "date":"Sunday, April 21st at 7am",
         "activity":"Ski/Snowboard at Stevens",
         "description":"Hit the slopes and meet new friends! Must bring your own gear!",
         "img":"/img/skiing.jpg",
-        "alt":"person skiing down a mountain"
+        "alt":"person skiing down a mountain",
+        "type":"Recreational Sports"
     },
     {
         "date":"Thursday, April 25th at 6pm", 
         "activity":"Bouldering", 
         "description":"Join us at the Seattle Bouldering Project in Fremont!",
         "img":"/img/rock-climbing.jpg",
-        "alt":"person rock climbing indoors"
+        "alt":"person rock climbing indoors",
+        "type":"Recreational Sports"
     }
 ]

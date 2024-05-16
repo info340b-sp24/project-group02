@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Card({activityDetails}) {
+function Card({ activityDetails }) {
     const { date, activity, description, img, alt } = activityDetails;
 
     return (
@@ -19,19 +19,24 @@ function Card({activityDetails}) {
     )
 }
 
-export function CardList({activities}) {
+export function CardList({ activities }) {
     if (activities.length === 0) {
         return <div>No results</div>;
     }
 
     const cardList = activities.map((card) => {
-        const element = <Card key={card.activity} activityDetails={card}/>
+        const element = <Card key={card.activity} activityDetails={card} />
         return element;
     });
 
     return (
-        <div className="row">
-            {cardList}
-        </div>
+        <>
+            <div className="row">
+                {cardList}
+            </div>
+            <div class="d-flex justify-content-end">
+                <a href="#" class="btn btn-dark">{"See All >>>"}</a>
+            </div>
+        </>
     )
 }
