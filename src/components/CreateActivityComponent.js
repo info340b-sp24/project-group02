@@ -1,10 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export function CreateActivity(props) {
+    const navigate = useNavigate();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // TODO: add to database
+        navigate("/");
+    };
+
     return (
         <div>
              <h1 className="text-center">Create An Activity</h1>
-            <form className="m-2" action="index.html" method="POST">
+            <form className="m-2" onSubmit={handleSubmit}>
                 <div className="bottom-spacing">
                     <label for="name" className="form-label">Name:</label>
                     <input type="text" className="form-control" id="name" name="name"/>

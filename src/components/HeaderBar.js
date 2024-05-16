@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export function Header(props) {
     return (
@@ -7,13 +8,13 @@ export function Header(props) {
                 <h1 className="navbar-brand fs-1 fw-bold">UW Ride With Friends</h1>
                 <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
                     <li className="nav-item">
-                        <a className="nav-link" href="#/">Home</a>
+                        <Link className="nav-link" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#/">My Activity</a>
+                        <Link className="nav-link" to="/my-activity">My Activity</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#/">Create An Activity</a>
+                        <Link className="nav-link" to="/create-activity">Create An Activity</Link>
                     </li>
                 </ul>
                 {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation"</div>>
