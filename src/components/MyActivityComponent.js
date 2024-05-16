@@ -1,6 +1,6 @@
 import React from 'react';
 import { SearchBar } from './SearchBar.js';
-import { CardList } from './Card.js';
+import { CardList } from './CardList.js';
 import REGISTERED_ACTIVITIES from '../data/registered_activities.json';
 import CREATED_ACTIVITIES from '../data/created_activities.json';
 

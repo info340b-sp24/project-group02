@@ -3,7 +3,20 @@
         "date":"Sunday, April 28th at 10am", 
         "activity":"Walk Around Seattle", 
         "description":"Explore Seattle on foot and meet new friends!",
-        "img":"img/walking.jpg",
+        "detailInformation":"We'll meet on campus at 7am-- location will be sent after sign ups close. Sign ups close when full or on Saturday, April 20th, at 6pm. Must bring your own gear!",
+        "img":"/img/walking.jpg",
         "alt":"person walking on sidewalk"
+    },
+
+    {
+        "date":"Friday, April 19 at 9am", 
+        "activity":"Hiking Mt. Rainier", 
+        "description":"Join us for an unforgettable adventure as we hike Mt. Rainier this weekend—let's conquer the summit together!",
+        "detailInformation":"We'll meet on campus at 7am-- location will be sent after sign ups close. Sign ups close when full or on Saturday, April 9th, at 9pm. Must bring your own gear!",
+        "img":"/img/mt-rainer.jpg",
+        "alt":"Hiking Mt. Rainier"
     }
+
+
 ]
+

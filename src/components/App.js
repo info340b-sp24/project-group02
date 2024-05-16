@@ -21,7 +21,7 @@ function App(props) {
                     <Route path="/activity" element={<ActivityDetails />} />
                     <Route path="/create-activity" element={<CreateActivity />} />
                     <Route path="/my-activity" element={<MyActivity />} />
-                    {/* TODO: need a path with parameter */}
+                    <Route path="/activity/:name" element={<ActivityDetails />} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             </main>

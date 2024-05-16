@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SUGGESTED_DATA from '../data/suggest.json';
 import YOUR_ACTIVITIES from '../data/your_activities.json';
 import { SearchBar } from './SearchBar';
-import { CardList } from './Card';
+import { CardList } from './CardList';
 
 export function HomePage() {
     const [filter, setFilter] = useState("All");

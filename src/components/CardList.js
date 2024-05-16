@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Card({activityDetails}) {
     const { date, activity, description, img, alt } = activityDetails;
@@ -11,7 +12,7 @@ function Card({activityDetails}) {
                     <p className="card-subtitle text-success">{date}</p>
                     <h2 className="card-title m-0">{activity}</h2>
                     <p className="card-text">{description}</p>
-                    <a href="#" className="btn btn-dark">More Details</a>
+                    <Link to={"/activity/" + encodeURIComponent(activity)} className="btn btn-dark">More Details</Link>
                 </div>
             </div>
         </div>
@@ -22,7 +23,7 @@ export function CardList({activities}) {
     if (activities.length === 0) {
         return <div>No results</div>;
     }
-    
+
     const cardList = activities.map((card) => {
         const element = <Card key={card.activity} activityDetails={card}/>
         return element;
