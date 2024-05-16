@@ -7,8 +7,26 @@ import CREATED_ACTIVITIES from '../data/created_activities.json';
 export function MyActivity(props) {
     const [filter, setFilter] = useState("All");
 
+    const [searchInput, setSearchInput] = useState("");
+
+    const [registered, setRegistered] = useState(REGISTERED_ACTIVITIES);
+
+    const [created, setCreated] = useState(CREATED_ACTIVITIES);
+
     const handleFilterSelect = (selectedFilter) => {
         setFilter(selectedFilter);
+    };
+
+    const handleChange = (event) => {
+        const inputtedValue = event.target.value;
+        setSearchInput(inputtedValue);
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setRegistered(searchActivities(registered));
+        setCreated(searchActivities(created));
+        setSearchInput("");
     };
 
     const filterActivities = (activities) => {
@@ -16,22 +34,30 @@ export function MyActivity(props) {
         return activities.filter(activity => activity.type === filter);
     };
 
+    const searchActivities = (activities) => {
+        if (searchInput.length > 0) {
+            return activities.filter(event => event.activity.toLowerCase().includes(searchInput.toLowerCase()));
+        } else {
+            return activities;
+        };
+    }
+
     return (
         <div>
             <div className="container-fluid text-black bg-light py-3">
                 <h1 className="text-center">My Activity</h1>
-                <SearchBar onFilterSelect={handleFilterSelect} />
+                <SearchBar onFilterSelect={handleFilterSelect} handleChange={handleChange} handleSubmit={handleSubmit}/>
             </div>
             <div className="container">
                 <h2 className="text underlined">Activities I've Registered For</h2>
                 <div className="row">
-                    <CardList activities={filterActivities(REGISTERED_ACTIVITIES)}/>
+                    <CardList activities={registered && filterActivities(registered)}/>
                 </div>
             </div>
             <div className="container">
                 <h2 className="text underlined my-4">Activities I've Created</h2>
                 <div className="row">
-                    <CardList activities={filterActivities(CREATED_ACTIVITIES)}/>
+                    <CardList activities={created && filterActivities(created)}/>
                 </div>
             </div>
         </div>

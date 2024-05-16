@@ -34,8 +34,8 @@ export function CardList({ activities }) {
             <div className="row">
                 {cardList}
             </div>
-            <div class="d-flex justify-content-end">
-                <a href="#" class="btn btn-dark">{"See All >>>"}</a>
+            <div className="d-flex justify-content-end">
+                <a href="#" className="btn btn-dark">{"See All >>>"}</a>
             </div>
         </>
     )
