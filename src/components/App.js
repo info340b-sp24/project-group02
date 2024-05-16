@@ -1,23 +1,29 @@
 import React from 'react';
-import {Header} from './HeaderBar.js';
-import {HomePage} from './HomeComponent.js';
-import {MyActivity} from './MyActivityComponent.js';
-import {ActivityDetails} from './ActivityDetailsComponent.js';
-import {CreateActivity} from './CreateActivityComponent.js';
+import { Header } from './HeaderBar.js';
+import { HomePage } from './HomePage';
+import { MyActivity } from './MyActivityComponent.js';
+import { ActivityDetails } from './ActivityDetailsComponent.js';
+import { CreateActivity } from './CreateActivityComponent.js';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 
 function App(props) {
     return (
         <div>
             <header>
-                <Header/>
+                <Header />
             </header>
 
+
             <main>
-                <HomePage/>
-                {/* {<MyActivity/>} */}
-                {/* {<ActivityDetails/>} */}
-                {/* <CreateActivity/> */}
+                <Routes>
+\                   <Route index element={<HomePage />} />
+                    <Route path="/activity" element={<ActivityDetails />} />
+                    <Route path="/create-activity" element={<CreateActivity />} />
+                    <Route path="/my-activity" element={<MyActivity />} />
+                    {/* TODO: need a path with parameter */}
+                    <Route path="*" element={<Navigate to="/" />} />
+                </Routes>
             </main>
 
             <footer>

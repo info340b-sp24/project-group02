@@ -4,20 +4,23 @@
         "activity":"Biking On The Burke Gilman", 
         "description":"Take a scenic bike ride with new friends along the Burke Gilman!", 
         "img":"/img/biking.jpg",
-        "alt":"people biking"
+        "alt":"people biking",
+        "type":"Recreational Sports"
     },
     {
         "date":"Friday, April 19th at 9am", 
         "activity":"Hiking Mt. Rainer", 
         "description":"Join us for an unforgettable adventure as we hike Mt. Rainier this weekend—let's conquer the summit together!",
         "img":"/img/hiking.jpg",
-        "alt":"people hiking"
+        "alt":"people hiking",
+        "type":"Hike"
     },
     {
         "date":"Tuesday, April 23rd at 2pm", 
         "activity":"Costco Run", 
         "description":"Get a ride to Costco with new friends to pick up some groceries!",
         "img":"/img/costco.jpg",
-        "alt":"costco storefront"
+        "alt":"costco storefront",
+        "type":"Grocery"
     }
 ]

@@ -19,6 +19,10 @@ function Card({activityDetails}) {
 }
 
 export function CardList({activities}) {
+    if (activities.length === 0) {
+        return <div>No results</div>;
+    }
+    
     const cardList = activities.map((card) => {
         const element = <Card key={card.activity} activityDetails={card}/>
         return element;
