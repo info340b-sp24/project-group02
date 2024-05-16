@@ -5,6 +5,7 @@ import { MyActivity } from './MyActivityComponent.js';
 import { ActivityDetails } from './ActivityDetailsComponent.js';
 import { CreateActivity } from './CreateActivityComponent.js';
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { SignUp } from './SignUp.js';
 
 
 function App(props) {
@@ -22,6 +23,7 @@ function App(props) {
                     <Route path="/create-activity" element={<CreateActivity />} />
                     <Route path="/my-activity" element={<MyActivity />} />
                     <Route path="/activity/:name" element={<ActivityDetails />} />
+                    <Route path="/sign-up/:activity" element={<SignUp />} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             </main>
