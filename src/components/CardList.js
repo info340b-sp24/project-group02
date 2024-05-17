@@ -12,7 +12,8 @@ function Card({ activityDetails }) {
                     <p className="card-subtitle text-success">{date}</p>
                     <h2 className="card-title m-0">{activity}</h2>
                     <p className="card-text">{description}</p>
-                    <Link to={"/activity/" + encodeURIComponent(activity)} className="btn btn-dark">More Details</Link>
+                    {/* <Link to={"/activity/" + encodeURIComponent(activity)} className="btn btn-dark">More Details</Link> */}
+                    <Link to={"/sign-up/" + activity} className="btn btn-dark mb-4">Sign Up</Link>
                 </div>
             </div>
         </div>
