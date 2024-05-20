@@ -1,28 +1,33 @@
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import SUGGESTED from '../data/suggest.json';
 
-// function for signing up 
 export function SignUp({ addActivity }) {
-    // const [userActivities, setUserActivities] = useState([]);
     const { activity } = useParams();
     const navigate = useNavigate();
     const [name, setName] = useState('');
     const [phoneNum, setPhoneNum] = useState('');
     const [email, setEmail] = useState('');
 
-    // callback function for submitting the form
+    // find the activity from the suggested json file
+    const selectedActivity = SUGGESTED.find(act => act.activity === activity);
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        const userInfo = {
-            name, phoneNum, email, activity
+        const actInfo = {
+            date: selectedActivity.date,
+            description: selectedActivity.description,
+            img: selectedActivity.img,
+            activity: selectedActivity.activity,
+            name,
+            phoneNum,
+            email
         };
-        // onSignUp(userInfo);
-        addActivity(userInfo);
+        addActivity(actInfo);
         setName('');
         setPhoneNum('');
         setEmail('');
         navigate('/my-activity');
-        // <Link to="/my-activity" element={<MyActivity />} />
     };
 
     return (
@@ -39,14 +44,12 @@ export function SignUp({ addActivity }) {
                 </div>
                 <div className="bottom-spacing">
                     <label htmlFor="email" className="form-label">Email:</label>
-                   <input id="email" className="form-control" value={email} onChange={(event) => setEmail(event.target.value)} />
+                    <input id="email" className="form-control" value={email} onChange={(event) => setEmail(event.target.value)} />
                 </div>
                 <div className="bottom-spacing">
                     <button type="submit" className="btn btn-dark mb-4">Submit</button>
                 </div>
             </form>
-        </div>    
+        </div>
     );
-
-
 }

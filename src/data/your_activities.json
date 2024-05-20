@@ -8,6 +8,14 @@
         "type":"Recreational Sports"
     },
     {
+        "date":"Friday, April 19th at 9am", 
+        "activity":"Hiking Mt. Rainier", 
+        "description":"Join us for an unforgettable adventure as we hike Mt. Rainier this weekend—let's conquer the summit together!",
+        "img":"/img/hiking.jpg",
+        "alt":"people hiking",
+        "type":"Hike"
+    },
+    {
         "date":"Sunday, April 28th at 10am", 
         "activity":"Walk Around Seattle", 
         "description":"Explore Seattle on foot and meet new friends!",

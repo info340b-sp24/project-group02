@@ -10,13 +10,11 @@ import REGISTERED_ACTIVITIES from '../data/registered_activities.json';
 
 
 function App(props) {
-    // const [userActivities, setUserActivities] = useState([]);
     // activities signed up for
     const [registeredActivities, setRegisteredActivities] = useState(REGISTERED_ACTIVITIES);
     // add activity to registered
     const addActivity = (activity) => {
         setRegisteredActivities(initActivities => [...initActivities, activity]); 
-
     };
 
     return (

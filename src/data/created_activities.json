@@ -8,28 +8,6 @@
         "alt":"person walking on sidewalk",
         "type":"Recreational Sports"
 
-    },
-
-    {
-        "date":"Friday, April 30 at 8am", 
-        "activity":"Hiking Mt. Rainier", 
-        "description":"Join us for an unforgettable adventure as we hike Mt. Rainier this weekend—let's conquer the summit together!",
-        "detailInformation":"We'll meet on campus at 6am-- location will be sent after sign ups close. Sign ups close when full or on Thursday, April 25th, at 11pm. Must bring your own gear!",
-        "img":"/img/mt-rainer.jpg",
-        "alt":"Hiking Mt. Rainier",
-        "type":"Hike"
-    },
-
-    {
-        "date":"Sunday, April 21 at 11am", 
-        "activity":"Biking On The Burke Gilman", 
-        "description":"Take a scenic bike ride with new friends along the Burke Gilman!",
-        "detailInformation":"We'll meet on campus at 8am—location details will be sent after sign-ups close. Sign-ups close when full or on Thursday, April 18th, at 9pm. Please note, you must bring your own biking gear!",
-        "img":"/img/biking.jpg",
-        "alt":"people biking",
-        "type":"Recreational Sports"
     }
-
-
 ]
 
