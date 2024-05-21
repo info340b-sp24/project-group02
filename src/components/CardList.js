@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom';
 function Card({ activityDetails, signedUp }) {
     const { date, activity, description, img, alt } = activityDetails;
     let button;
-    if (signedUp) {
-        button = <Link to={"/activity/" + encodeURIComponent(activity)} className="btn btn-dark">More Details</Link>
-    } else {
+    // if (signedUp) {
+    //     button = <Link to={"/activity/" + encodeURIComponent(activity)} className="btn btn-dark">More Details</Link>
+    // } else {
+    //     button = <Link to={"/sign-up/" + activity} className="btn btn-dark mb-4">Sign Up</Link>;
+    // }
+    if (!signedUp) {
         button = <Link to={"/sign-up/" + activity} className="btn btn-dark mb-4">Sign Up</Link>;
     }
 
@@ -42,9 +45,9 @@ export function CardList({ activities, signedUp }) {
             <div className="row">
                 {cardList}
             </div>
-            <div className="d-flex justify-content-end">
+            {/* <div className="d-flex justify-content-end">
                 <a href="#" className="btn btn-dark">{"See All >>>"}</a>
-            </div>
+            </div> */}
         </>
     )
 }
