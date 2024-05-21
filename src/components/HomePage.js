@@ -54,7 +54,7 @@ export function HomePage() {
             <div className="container">
                 <h2 className="underlined">Your Activities</h2>
                 <div className="row">
-                    <CardList activities={yours && filterActivities(yours)} />
+                    <CardList activities={yours && filterActivities(yours)} signedUp={true} />
                 </div>
             </div>
         </div>

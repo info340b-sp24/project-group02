@@ -10,7 +10,7 @@ export function MyActivity({ registeredActivities }) {
 
     const [searchInput, setSearchInput] = useState("");
 
-    const [signedUp, setSignedUp] = useState(false); 
+    // const [signedUp, setSignedUp] = useState(false); 
 
 
     // const [registered, setRegistered] = useState(REGISTERED_ACTIVITIES);
