@@ -1,25 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 export function Header(props) {
     return (
         <header>
-            <nav className="navbar navbar-expand-lg bottom-spacing">
-                <div className="container-fluid">
-                    <h1 className="navbar-brand fs-1 fw-bold">UW Ride With Friends</h1>
-                    <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/">Home</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/my-activity">My Activity</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/create-activity">Create An Activity</Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <Navbar expand="lg" className="bottom-spacing">
+                <Container fluid>
+                    <Navbar.Brand className="fs-1 fw-bold">UW Ride With Friends</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="navbar-nav" />
+                    <Navbar.Collapse id="navbar-nav">
+                        <Nav className="me-auto my-2 my-lg-0 navbar-nav-scroll">
+                            <LinkContainer to="/">
+                                <Nav.Link>Home</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/my-activity">
+                                <Nav.Link>My Activity</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/create-activity">
+                                <Nav.Link>Create An Activity</Nav.Link>
+                            </LinkContainer>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
         </header>
-    )
+    );
 }
