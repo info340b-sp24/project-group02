@@ -36,15 +36,15 @@ export function SignUp({ addActivity }) {
             <form onSubmit={handleSubmit}>
                 <div className="bottom-spacing">
                     <label htmlFor="name" className="form-label">Name:</label>
-                    <input id="name" className="form-control" value={name} onChange={(event) => setName(event.target.value)} />
+                    <input id="name" className="form-control" value={name} required onChange={(event) => setName(event.target.value)} />
                 </div>
                 <div className="bottom-spacing">
                     <label htmlFor="phone-number" className="form-label">Phone Number:</label>
-                    <input id="phone-number" className="form-control" value={phoneNum} onChange={(event) => setPhoneNum(event.target.value)} />
+                    <input id="phone-number" className="form-control" value={phoneNum} required onChange={(event) => setPhoneNum(event.target.value)} />
                 </div>
                 <div className="bottom-spacing">
                     <label htmlFor="email" className="form-label">Email:</label>
-                    <input id="email" className="form-control" value={email} onChange={(event) => setEmail(event.target.value)} />
+                    <input id="email" className="form-control" value={email} required onChange={(event) => setEmail(event.target.value)} />
                 </div>
                 <div className="bottom-spacing">
                     <button type="submit" className="btn btn-dark mb-4">Submit</button>

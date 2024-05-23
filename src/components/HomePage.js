@@ -9,10 +9,6 @@ export function HomePage() {
 
     const [searchInput, setSearchInput] = useState("");
 
-    const [display, setDisplay] = useState(SUGGESTED_DATA);
-
-    const [yours, setYours] = useState(YOUR_ACTIVITIES);
-
     const handleFilterSelect = (selectedFilter) => {
         setFilter(selectedFilter);
     };
@@ -21,13 +17,6 @@ export function HomePage() {
         const inputtedValue = event.target.value;
         setSearchInput(inputtedValue);
     }
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        setDisplay(searchActivities(display));
-        setYours(searchActivities(yours));
-        setSearchInput("");
-    };
 
     const filterActivities = (activities) => {
         if (filter === "All") return activities;
@@ -42,16 +31,19 @@ export function HomePage() {
         };
     }
 
+    const filteredAndSearchedSuggestedActivities = searchActivities(filterActivities(SUGGESTED_DATA));
+    const filteredAndSearchedYourActivities = searchActivities(filterActivities(YOUR_ACTIVITIES));
+
     return (
         <div>
-            <SearchBar onFilterSelect={handleFilterSelect} handleChange={handleChange} handleSubmit={handleSubmit} />
+            <SearchBar onFilterSelect={handleFilterSelect} handleChange={handleChange} value={searchInput} />
             <div className="container">
                 <h2 className="underlined">Suggested</h2>
-                <CardList activities={display && filterActivities(display)} />
+                <CardList activities={filteredAndSearchedSuggestedActivities} />
             </div>
             <div className="container">
                 <h2 className="underlined">Your Activities</h2>
-                <CardList activities={yours && filterActivities(yours)} signedUp={true} />
+                <CardList activities={filteredAndSearchedYourActivities} signedUp={true} />
             </div>
         </div>
     );
