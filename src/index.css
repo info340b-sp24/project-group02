@@ -12,6 +12,13 @@ h2 {
     margin-bottom: 0.75rem;
 }
 
+h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
@@ -19,33 +26,31 @@ body {
     color: #333;
 }
 
-.navbar-brand {
-    color: white; 
+.bottom-spacing {
+    margin-bottom: 1.5em;
 }
 
-.name_results {
-    font-size: 1rem;
-    border-radius: 10px;
-    padding: 10px;
-    width: 300px;
-    margin: 20px 10px 10px 50px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.underlined {
+    border-bottom: 1px solid black;
 }
 
-.result {
-    margin-left:15px;
-    color: gray;
-}
-
-.result-wrap {
-    font-weight: bold;
-    color: hsl(274, 92%, 24%);
-}
-    
+/* Navigation Bar */
 nav {
     background-color:hsl(274, 92%, 24%);
     padding: 1rem 0;
+}
+
+.navbar {
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-toggler{
+    background-color: white;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+    color: white; 
 }
 
 .nav-link {
@@ -60,36 +65,7 @@ nav {
     color: #fff;
 }
 
-
-.navbar {
-    border-bottom: 1px solid #ddd;
-}
-
-.navbar-toggler{
-    background-color: white;
-}
-
-h3 {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-}
-
-.bottom-spacing {
-    margin-bottom: 1.5em;
-}
-
-.underlined {
-    border-bottom: 1px solid black;
-}
-
-footer {
-    color: white;
-    background-color: #301934;
-    text-align: center;
-}
-
+/* Forms */
 form {
     background-color: #fff;
     padding: 2rem;
@@ -97,6 +73,7 @@ form {
     border: 1px solid #ddd; 
 }
 
+/* Cards */
 .card {
     background-color: white; 
     border: 1px solid #eeeeee; 
@@ -116,10 +93,46 @@ form {
     justify-content: space-between;
 }
 
+.card-subtitle {
+    color: #198754;
+    size: 12px;
+    font-weight: bold;
+}
+
+/* Results */
+.name_results {
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    margin: 20px 10px 10px 50px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result {
+    margin-left: 15px;
+    color: gray;
+}
+
+.result-wrap {
+    font-weight: bold;
+    color: hsl(274, 92%, 24%);
+}
+
+/* Footer */
+footer {
+    color: white;
+    background-color: #301934;
+    text-align: center;
+}
+
+/* Lists */
 ul, ol {
     padding-left: 20px; 
 }
 
+/* Buttons */
 .button-primary {
     background-color: #cf9fff;
     color: white;
@@ -131,16 +144,6 @@ ul, ol {
 
 .button-primary:hover {
     background-color: #3a2066;
-}
-
-.card-subtitle {
-    color: #198754;
-    size: 12px;
-    font-weight: bold;
-}
-
-img {
-    display: none;
 }
 
 .btn.filter-dropdown,
@@ -155,6 +158,12 @@ img {
     color: #4b2e83;
 }
 
+/* Images */
+img {
+    display: none;
+}
+
+/* Media Queries */
 @media (min-width: 768px) {
     .navbar {
         background-image: url('/public/img/purpler-larger-bg.jpg');
@@ -163,6 +172,7 @@ img {
     img {
         display: block;
     }
+
     .nav-link {
         padding: 0.3rem;
         font-size: 0.9rem;
