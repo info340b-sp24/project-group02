@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Card({ activityDetails, signedUp }) {
-    const { date, activity, description, img, alt } = activityDetails;
+function Card(props) {
+// function Card({ activityDetails, signedUp }) {
+    const { date, activity, description, img, alt } = props.activityDetails;
     let button;
-    if (!signedUp) {
+    if (!props.signedUp) {
         button = <Link to={"/sign-up/" + activity} className="btn btn-dark mb-4">Sign Up</Link>;
     }
 

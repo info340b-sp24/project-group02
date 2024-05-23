@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import SUGGESTED from '../data/suggest.json';
 
-export function SignUp({ addActivity }) {
+export function SignUp(props) {
+
+// export function SignUp({ addActivity }) {
     const { activity } = useParams();
     const navigate = useNavigate();
     const [name, setName] = useState('');
@@ -23,7 +25,8 @@ export function SignUp({ addActivity }) {
             phoneNum,
             email
         };
-        addActivity(actInfo);
+        props.addActivity(actInfo);
+        // addActivity(actInfo);
         setName('');
         setPhoneNum('');
         setEmail('');
