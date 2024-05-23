@@ -54,22 +54,15 @@ export function MyActivity({ registeredActivities }) {
         <div>
             <div className="container-fluid text-black bg-light py-3">
                 <h1 className="text-center">My Activity</h1>
-                <SearchBar onFilterSelect={handleFilterSelect} handleChange={handleChange} handleSubmit={handleSubmit}/>
+                <SearchBar onFilterSelect={handleFilterSelect} handleChange={handleChange} handleSubmit={handleSubmit} />
             </div>
             <div className="container">
                 <h2 className="text underlined">Activities I've Registered For</h2>
-                <div className="row">
-                    {/* <CardList activities={registered && filterActivities(registered)}/> */}
-                    <CardList activities={filteredAndSearchedRegisteredActivities} signedUp={true} />
-
-                </div>
+                <CardList activities={filteredAndSearchedRegisteredActivities} signedUp={true} />
             </div>
             <div className="container">
                 <h2 className="text underlined my-4">Activities I've Created</h2>
-                <div className="row">
-                    {/* <CardList activities={created && filterActivities(created)}/> */}
-                    <CardList activities={filteredAndSearchedCreatedActivities} signedUp={true}/>
-                </div>
+                <CardList activities={filteredAndSearchedCreatedActivities} signedUp={true} />
             </div>
         </div>
     )

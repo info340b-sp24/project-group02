@@ -44,18 +44,14 @@ export function HomePage() {
 
     return (
         <div>
-            <SearchBar onFilterSelect={handleFilterSelect} handleChange={handleChange} handleSubmit={handleSubmit}/>
+            <SearchBar onFilterSelect={handleFilterSelect} handleChange={handleChange} handleSubmit={handleSubmit} />
             <div className="container">
                 <h2 className="underlined">Suggested</h2>
-                <div className="row">
-                    <CardList activities={display && filterActivities(display)}/>
-                </div>
+                <CardList activities={display && filterActivities(display)} />
             </div>
             <div className="container">
                 <h2 className="underlined">Your Activities</h2>
-                <div className="row">
-                    <CardList activities={yours && filterActivities(yours)} signedUp={true} />
-                </div>
+                <CardList activities={yours && filterActivities(yours)} signedUp={true} />
             </div>
         </div>
     );

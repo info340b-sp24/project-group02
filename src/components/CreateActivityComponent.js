@@ -15,19 +15,19 @@ export function CreateActivity(props) {
              <h1 className="text-center">Create An Activity</h1>
             <form className="m-2" onSubmit={handleSubmit}>
                 <div className="bottom-spacing">
-                    <label for="name" className="form-label">Name:</label>
+                    <label htmlFor="name" className="form-label">Name:</label>
                     <input type="text" className="form-control" id="name" name="name"/>
                 </div>
                 <div className="bottom-spacing">
-                    <label for="phone-number" className="form-label">Phone Number:</label>
+                    <label htmlFor="phone-number" className="form-label">Phone Number:</label>
                     <input type="text" className="form-control" id="phone-number" name="phonenum"/>
                 </div>
                 <div className="bottom-spacing">
-                    <label for="event-name" className="form-label">Event Name:</label>
+                    <label htmlFor="event-name" className="form-label">Event Name:</label>
                     <input type="text" className="form-control" id="event-name" name="event"/>
                 </div>
                 <div className="bottom-spacing">
-                    <label for="activity" className="form-label">Activity Type:</label>
+                    <label htmlFor="activity" className="form-label">Activity Type:</label>
                     <select id="activity" name="activity" className="form-control">
                         <option value=""></option>
                         <option value="grocery">Grocery</option>
@@ -43,23 +43,23 @@ export function CreateActivity(props) {
                     </select>
                 </div>
                 <div className="bottom-spacing">
-                    <label for="event-details" className="form-label">Event Details:</label>
+                    <label htmlFor="event-details" className="form-label">Event Details:</label>
                     <textarea className="form-control" id="event-details" rows="4"></textarea>
                 </div>
                 <div className="bottom-spacing">
-                    <label for="event-date" className="form-label">Date:</label>
+                    <label htmlFor="event-date" className="form-label">Date:</label>
                     <input type="date" className="form-control" id="event-date" name="date"/>
                 </div>
                 <div className="bottom-spacing">
-                    <label for="event-time" className="form-label">Start Time:</label>
+                    <label htmlFor="event-time" className="form-label">Start Time:</label>
                     <input type="time" className="form-control" id="event-time" name="starttime"/>
                 </div>
                 <div className="bottom-spacing">
-                    <label for="event-duration" className="form-label">Estimated Duration (in minutes):</label>
+                    <label htmlFor="event-duration" className="form-label">Estimated Duration (in minutes):</label>
                     <input type="number" className="form-control" id="event-duration" name="duration"/>
                 </div>
                 <div className="bottom-spacing">
-                    <label for="num-spots" className="form-label">Number of Spots Available:</label>
+                    <label htmlFor="num-spots" className="form-label">Number of Spots Available:</label>
                     <input type="number" className="form-control" id="num-spots" name="spots"/>
                 </div>
                 <div className="bottom-spacing">
