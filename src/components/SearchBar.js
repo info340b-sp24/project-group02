@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import FilterDropdown from './FilterDropdown';
 
 export function SearchBar({ onFilterSelect, handleChange, value }) {
