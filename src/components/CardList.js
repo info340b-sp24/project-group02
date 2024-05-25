@@ -1,15 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Card({ activityDetails, signedUp }) {
-    const { date, activity, description, img, alt } = activityDetails;
+function Card(props) {
+// function Card({ activityDetails, signedUp }) {
+    const { date, activity, description, img, alt } = props.activityDetails;
     let button;
-    // if (signedUp) {
-    //     button = <Link to={"/activity/" + encodeURIComponent(activity)} className="btn btn-dark">More Details</Link>
-    // } else {
-    //     button = <Link to={"/sign-up/" + activity} className="btn btn-dark mb-4">Sign Up</Link>;
-    // }
-    if (!signedUp) {
+    if (!props.signedUp) {
         button = <Link to={"/sign-up/" + activity} className="btn btn-dark mb-4">Sign Up</Link>;
     }
 
@@ -21,9 +17,7 @@ function Card({ activityDetails, signedUp }) {
                     <p className="card-subtitle text-success">{date}</p>
                     <h2 className="card-title m-0">{activity}</h2>
                     <p className="card-text">{description}</p>
-                    {/* <Link to={"/activity/" + encodeURIComponent(activity)} className="btn btn-dark">More Details</Link> */}
-                    {/* <Link to={"/sign-up/" + activity} className="btn btn-dark mb-4">Sign Up</Link> */}
-                {button}
+                    {button}
                 </div>
             </div>
         </div>
@@ -36,18 +30,13 @@ export function CardList({ activities, signedUp }) {
     }
 
     const cardList = activities.map((card) => {
-        const element = <Card key={card.activity} activityDetails={card} signedUp={signedUp}/>
+        const element = <Card key={card.activity} activityDetails={card} signedUp={signedUp} />
         return element;
     });
 
     return (
-        <>
-            <div className="row">
-                {cardList}
-            </div>
-            {/* <div className="d-flex justify-content-end">
-                <a href="#" className="btn btn-dark">{"See All >>>"}</a>
-            </div> */}
-        </>
+        <div className="row">
+            {cardList}
+        </div>
     )
 }

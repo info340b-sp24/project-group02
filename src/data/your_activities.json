@@ -22,5 +22,14 @@
         "img":"img/walking.jpg",
         "alt":"person walking on sidewalk",
         "type":"Recreational Sports"
+    },
+    {
+        "date":"Sunday, April 21st at 7am",
+        "activity":"Ski/Snowboard at Stevens",
+        "description":"Hit the slopes and meet new friends! Must bring your own gear!",
+        "img":"/img/skiing.jpg",
+        "alt":"person skiing down a mountain",
+        "type":"Recreational Sports"
     }
+
 ]

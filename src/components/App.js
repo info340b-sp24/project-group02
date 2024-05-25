@@ -19,17 +19,13 @@ function App(props) {
 
     return (
         <div>
-            <header>
-                <Header />
-            </header>
-
+            <Header />
 
             <main>
                 <Routes>
 \                   <Route index element={<HomePage />} />
                     <Route path="/activity" element={<ActivityDetails />} />
                     <Route path="/create-activity" element={<CreateActivity />} />
-                    {/* <Route path="/my-activity" element={<MyActivity />} /> */}
                     <Route path="/my-activity" element={<MyActivity registeredActivities={registeredActivities} />} />
                     <Route path="/activity/:name" element={<ActivityDetails />} />
                     <Route path="/sign-up/:activity" element={<SignUp addActivity={addActivity} />} />

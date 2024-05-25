@@ -1,12 +1,10 @@
 import React from 'react';
-import {CardList} from './CardList.js';
 import CREATED_ACTIVITIES from '../data/created_activities.json';
 import { Link, useParams } from 'react-router-dom';
 
 export function ActivityDetails(props) {
     const { name } = useParams();
     const activity = CREATED_ACTIVITIES.find(activity => {
-        console.log(activity.activity, decodeURIComponent(name), activity.activity === decodeURIComponent(name))
         return activity.activity === decodeURIComponent(name);
     });
 
@@ -35,11 +33,6 @@ export function ActivityDetails(props) {
                     </div>
                 </div>
             </main>
-            {/* <div className="row">
-                <CardList activties={CREATED_ACTIVITIES}/>
-            </div> */}
-
-            
         </div>
     )
 }

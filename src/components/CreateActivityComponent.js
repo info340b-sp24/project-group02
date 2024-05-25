@@ -15,20 +15,20 @@ export function CreateActivity(props) {
              <h1 className="text-center">Create An Activity</h1>
             <form className="m-2" onSubmit={handleSubmit}>
                 <div className="bottom-spacing">
-                    <label for="name" className="form-label">Name:</label>
-                    <input type="text" className="form-control" id="name" name="name"/>
+                    <label htmlFor="name" className="form-label">Name:</label>
+                    <input type="text" className="form-control" id="name" name="name" required />
                 </div>
                 <div className="bottom-spacing">
-                    <label for="phone-number" className="form-label">Phone Number:</label>
-                    <input type="text" className="form-control" id="phone-number" name="phonenum"/>
+                    <label htmlFor="phone-number" className="form-label">Phone Number:</label>
+                    <input type="text" className="form-control" id="phone-number" name="phonenum" required />
                 </div>
                 <div className="bottom-spacing">
-                    <label for="event-name" className="form-label">Event Name:</label>
-                    <input type="text" className="form-control" id="event-name" name="event"/>
+                    <label htmlFor="event-name" className="form-label">Event Name:</label>
+                    <input type="text" className="form-control" id="event-name" name="event" required />
                 </div>
                 <div className="bottom-spacing">
-                    <label for="activity" className="form-label">Activity Type:</label>
-                    <select id="activity" name="activity" className="form-control">
+                    <label htmlFor="activity" className="form-label">Activity Type:</label>
+                    <select id="activity" name="activity" className="form-control" required>
                         <option value=""></option>
                         <option value="grocery">Grocery</option>
                         <option value="hike">Hike</option>
@@ -43,24 +43,28 @@ export function CreateActivity(props) {
                     </select>
                 </div>
                 <div className="bottom-spacing">
-                    <label for="event-details" className="form-label">Event Details:</label>
-                    <textarea className="form-control" id="event-details" rows="4"></textarea>
+                    <label htmlFor="event-details" className="form-label">Event Details:</label>
+                    <textarea className="form-control" id="event-details" rows="4" required></textarea>
                 </div>
                 <div className="bottom-spacing">
-                    <label for="event-date" className="form-label">Date:</label>
-                    <input type="date" className="form-control" id="event-date" name="date"/>
+                    <label htmlFor="event-date" className="form-label">Date:</label>
+                    <input type="date" className="form-control" id="event-date" name="date" required />
                 </div>
                 <div className="bottom-spacing">
-                    <label for="event-time" className="form-label">Start Time:</label>
-                    <input type="time" className="form-control" id="event-time" name="starttime"/>
+                    <label htmlFor="event-time" className="form-label">Start Time:</label>
+                    <input type="time" className="form-control" id="event-time" name="starttime" required />
                 </div>
                 <div className="bottom-spacing">
-                    <label for="event-duration" className="form-label">Estimated Duration (in minutes):</label>
-                    <input type="number" className="form-control" id="event-duration" name="duration"/>
+                    <label htmlFor="event-duration" className="form-label">Estimated Duration (in minutes):</label>
+                    <input type="number" className="form-control" id="event-duration" name="duration" required />
                 </div>
                 <div className="bottom-spacing">
-                    <label for="num-spots" className="form-label">Number of Spots Available:</label>
-                    <input type="number" className="form-control" id="num-spots" name="spots"/>
+                    <label htmlFor="num-spots" className="form-label">Number of Spots Available:</label>
+                    <input type="number" className="form-control" id="num-spots" name="spots" required />
+                </div>
+                <div className="bottom-spacing">
+                    <label htmlFor="banner-image" className="form-label">Banner Image: </label>
+                    <input type="file" className="form-control" id="banner-image" required />
                 </div>
                 <div className="bottom-spacing">
                     <button type="submit" className="btn btn-dark">Submit</button>
