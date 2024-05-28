@@ -14,7 +14,7 @@ function App(props) {
     const [registeredActivities, setRegisteredActivities] = useState(REGISTERED_ACTIVITIES);
     // add activity to registered
     const addActivity = (activity) => {
-        setRegisteredActivities(initActivities => [...initActivities, activity]); 
+        setRegisteredActivities(registeredActivities => [...registeredActivities, activity]); 
     };
 
     return (

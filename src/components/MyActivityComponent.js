@@ -3,7 +3,7 @@ import { SearchBar } from './SearchBar.js';
 import { CardList } from './CardList.js';
 import CREATED_ACTIVITIES from '../data/created_activities.json';
 
-export function MyActivity(props) {
+export function MyActivity( {registeredActivities} ) {
     const [filter, setFilter] = useState("All");
 
     const [searchInput, setSearchInput] = useState("");
@@ -30,7 +30,7 @@ export function MyActivity(props) {
         };
     }
 
-    const filteredAndSearchedRegisteredActivities = searchActivities(filterActivities(props.registeredActivities));
+    const filteredAndSearchedRegisteredActivities = searchActivities(filterActivities(registeredActivities));
     const filteredAndSearchedCreatedActivities = searchActivities(filterActivities(CREATED_ACTIVITIES));
 
 
