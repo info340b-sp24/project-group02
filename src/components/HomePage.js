@@ -4,7 +4,7 @@ import YOUR_ACTIVITIES from '../data/your_activities.json';
 import { SearchBar } from './SearchBar';
 import { CardList } from './CardList';
 
-export function HomePage() {
+export function HomePage({db}) {
     const [filter, setFilter] = useState("All");
 
     const [searchInput, setSearchInput] = useState("");

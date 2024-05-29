@@ -1,0 +1,99 @@
+{
+    "created" : [
+        {
+            "date":"Sunday, April 28th at 10am", 
+            "activity":"Walk Around Seattle", 
+            "description":"Explore Seattle on foot and meet new friends!",
+            "detailInformation":"We'll meet on campus at 7am-- location will be sent after sign ups close. Sign ups close when full or on Saturday, April 20th, at 6pm. Must bring your own gear!",
+            "img":"/img/walking.jpg",
+            "alt":"person walking on sidewalk",
+            "type":"Recreational Sports"
+        }
+    ],
+    "registered" : [
+       {
+            "date":"Friday, April 19th at 9am", 
+            "activity":"Hiking Mt. Rainier", 
+            "description":"Join us for an unforgettable adventure as we hike Mt. Rainier this weekend—let's conquer the summit together!",
+            "img":"/img/hiking.jpg",
+            "alt":"people hiking",
+            "type":"Hike"
+        },
+        {
+            "date":"Sunday, April 21st at 7am",
+            "activity":"Ski/Snowboard at Stevens",
+            "description":"Hit the slopes and meet new friends! Must bring your own gear!",
+            "img":"/img/skiing.jpg",
+            "alt":"person skiing down a mountain",
+            "type":"Recreational Sports"
+        },
+        {
+            "date":"Thursday, April 25th at 6pm", 
+            "activity":"Bouldering", 
+            "description":"Join us at the Seattle Bouldering Project in Fremont!",
+            "img":"/img/rock-climbing.jpg",
+            "alt":"person rock climbing indoors",
+            "type":"Recreational Sports"
+        }
+    ],
+    "suggested" : [
+        {
+            "date":"Sunday, April 21 at 11am", 
+            "activity":"Biking On The Burke Gilman", 
+            "description":"Take a scenic bike ride with new friends along the Burke Gilman!", 
+            "img":"/img/biking.jpg",
+            "alt":"people biking",
+            "type":"Recreational Sports"
+        },
+        {
+            "date":"Tuesday, April 23rd at 2pm", 
+            "activity":"Costco Run", 
+            "description":"Get a ride to Costco with new friends to pick up some groceries!",
+            "img":"/img/costco.jpg",
+            "alt":"costco storefront",
+            "type":"Grocery"
+        },
+        {
+            "date":"Saturday, June 8th at 6pm", 
+            "activity":"Sabrina Carpenter concert", 
+            "description":"Dress up and dance the night away with new friends as Sabrina Carpenter performs her hit songs!",
+            "img":"/img/sabrina.jpg",
+            "alt":"Sabrina Carpenter",
+            "type":"Concert"
+        }
+    ],
+    "yours" : [
+        {
+            "date":"Thursday, April 25th at 6pm", 
+            "activity":"Bouldering", 
+            "description":"Join us at the Seattle Bouldering Project in Fremont!",
+            "img":"/img/rock-climbing.jpg",
+            "alt":"person rock climbing indoors",
+            "type":"Recreational Sports"
+        },
+        {
+            "date":"Friday, April 19th at 9am", 
+            "activity":"Hiking Mt. Rainier", 
+            "description":"Join us for an unforgettable adventure as we hike Mt. Rainier this weekend—let's conquer the summit together!",
+            "img":"/img/hiking.jpg",
+            "alt":"people hiking",
+            "type":"Hike"
+        },
+        {
+            "date":"Sunday, April 28th at 10am", 
+            "activity":"Walk Around Seattle", 
+            "description":"Explore Seattle on foot and meet new friends!",
+            "img":"img/walking.jpg",
+            "alt":"person walking on sidewalk",
+            "type":"Recreational Sports"
+        },
+        {
+            "date":"Sunday, April 21st at 7am",
+            "activity":"Ski/Snowboard at Stevens",
+            "description":"Hit the slopes and meet new friends! Must bring your own gear!",
+            "img":"/img/skiing.jpg",
+            "alt":"person skiing down a mountain",
+            "type":"Recreational Sports"
+        }
+    ]
+}
