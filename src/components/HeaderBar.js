@@ -1,8 +1,17 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import {NavLink} from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
+import { getAuth, signOut } from 'firebase/auth';
+
 
 export function Header(props) {
+    const currentUser = props.currentUser || {} ;
+
+    const handleSignOut = (event) => {
+        signOut(getAuth());
+    }
+
     return (
         <header>
             <Navbar expand="lg" className="bottom-spacing">
@@ -20,6 +29,23 @@ export function Header(props) {
                             <LinkContainer to="/create-activity">
                                 <Nav.Link>Create An Activity</Nav.Link>
                             </LinkContainer>
+                            {currentUser.userId &&
+                                <>
+                                    <li className="nav-item">
+                                        <NavLink to="/profile" className="nav-link">Profile</NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <button className="btn btn-secondary ms-2" onClick={handleSignOut}>Sign Out</button>
+                                    </li>
+                                </>
+                            }
+                            {!currentUser.userId &&
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/signin">
+                                        <img src={currentUser.userImg} alt={currentUser.userName + " avatar"} />
+                                    </NavLink>
+                                </li>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
