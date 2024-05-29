@@ -195,3 +195,23 @@ img {
         padding: 0.5rem 1rem;
     }
 }
+
+header img {
+    width:40px;
+    border-radius: 50%;
+  }
+  
+  header .user-icon img {
+    margin-right: .5rem;
+  
+  }
+
+.image-upload-form img {
+    display: block;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .userstoreimage {
+    width: 200px;
+  }
