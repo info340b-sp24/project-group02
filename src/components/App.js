@@ -8,20 +8,18 @@ import { Navigate, Route, Routes, useNavigate, Outlet } from 'react-router-dom';
 import { SignUp } from './SignUp.js';
 import SignInPage from './SignInPage.js';
 import ProfilePage from './ProfilePage.js';
-import DEFAULT_USERS from '../data/users.json';
-import { getDatabase, ref, onValue, push as FirebasePush } from 'firebase/database';
+import { getDatabase, ref, onValue } from 'firebase/database';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 function App(props) {
-  const db = getDatabase();
-
   const [createdActivities, setCreatedActivities] = useState({});
   const [registeredActivities, setRegisteredActivities] = useState({});
-  const [currentUser, setCurrentUser] = useState(DEFAULT_USERS[0]); // default to null user
+  const [currentUser, setCurrentUser] = useState(null); // default to null user
 
   const navigateTo = useNavigate();
 
   useEffect(() => {
+    const db = getDatabase();
     const registeredRef = ref(db, "registered");
     const createdRef = ref(db, "created");
     const auth = getAuth();
@@ -37,7 +35,7 @@ function App(props) {
         setCurrentUser(firebaseUser);
       } else {
         console.log("signed out");
-        setCurrentUser(DEFAULT_USERS[0]);
+        setCurrentUser(null);
       }
     });
 
@@ -77,17 +75,16 @@ function App(props) {
 
       <main>
         <Routes>
-          <Route index element={<HomePage />} />
+          <Route index element={<HomePage currentUser={currentUser} />} />
           <Route path="/activity" element={<ActivityDetails />} />
           <Route path="/create-activity" element={<CreateActivity />} />
-          <Route path="/my-activity" element={<MyActivity createdActivities={createdActivities} registeredActivities={registeredActivities} />} />
           <Route path="/activity/:name" element={<ActivityDetails />} />
           <Route path="/signin" element={<SignInPage currentUser={currentUser} loginCallback={loginUser} />} />
           <Route path="/sign-up/:activity" element={<SignUp />} />
           <Route path="*" element={<Navigate to="/" />} />
           <Route element={<ProtectedPage currentUser={currentUser} />}>
-            <Route path="my-activity" element={<MyActivity currentUser={currentUser} />} />
-            <Route path="profile" element={<ProfilePage currentUser={currentUser} />} />
+            <Route path="/my-activity" element={<MyActivity currentUser={currentUser} createdActivities={createdActivities} registeredActivities={registeredActivities} />} />
+            <Route path="/profile" element={<ProfilePage currentUser={currentUser} />} />
           </Route>
         </Routes>
       </main>
@@ -101,7 +98,7 @@ function App(props) {
 }
 
 function ProtectedPage(props) {
-  if (props.currentUser.userId === null) {
+  if (!props.currentUser?.userId) {
     return <Navigate to="/signin" />;
   } else {
     return <Outlet />;

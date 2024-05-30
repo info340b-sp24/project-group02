@@ -42,7 +42,7 @@ export function Header(props) {
                             {!currentUser.userId &&
                                 <li className="nav-item">
                                     <NavLink className="nav-link" to="/signin">
-                                        <img src={currentUser.userImg} alt={currentUser.userName + " avatar"} />
+                                        <img src="/img/blank.jpg" alt={currentUser.userName + " avatar"} />
                                     </NavLink>
                                 </li>
                             }

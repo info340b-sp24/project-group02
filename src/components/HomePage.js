@@ -3,7 +3,7 @@ import { getDatabase, ref, onValue } from 'firebase/database';
 import { SearchBar } from './SearchBar';
 import { CardList } from './CardList';
 
-export function HomePage() {
+export function HomePage({ currentUser }) {
     const [filter, setFilter] = useState("All");
     const [searchInput, setSearchInput] = useState("");
     const [suggestedActivities, setSuggestedActivities] = useState([]);
@@ -78,14 +78,16 @@ export function HomePage() {
                 <h2 className="underlined">Suggested</h2>
                 <CardList activities={filteredAndSearchedSuggestedActivities} />
             </div>
-            <div className="container">
-                <h2 className="underlined">Created Activities</h2>
-                <CardList activities={filteredAndSearchedCreatedActivities} signedUp={true} />
-            </div>
-            <div className="container">
-                <h2 className="underlined">Registered Activities</h2>
-                <CardList activities={filteredAndSearchedRegisteredActivities} signedUp={true} />
-            </div>
+            {currentUser?.userId && <>
+                <div className="container">
+                    <h2 className="underlined">Created Activities</h2>
+                    <CardList activities={filteredAndSearchedCreatedActivities} signedUp={true} />
+                </div>
+                <div className="container">
+                    <h2 className="underlined">Registered Activities</h2>
+                    <CardList activities={filteredAndSearchedRegisteredActivities} signedUp={true} />
+                </div>
+            </>}
         </div>
     );
 }

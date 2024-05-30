@@ -10,7 +10,7 @@ export default function SignInPage(props) {
 
   const auth = getAuth();
 
-  if (currentUser.userId) { 
+  if (currentUser?.userId) { 
     return <Navigate to="/my-activity" />
   }
   const configObj = {

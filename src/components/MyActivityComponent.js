@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { SearchBar } from './SearchBar.js';
 import { CardList } from './CardList.js';
-import CREATED_ACTIVITIES from '../data/created_activities.json';
 
-export function MyActivity({createdActivities, registeredActivities}) {
+export function MyActivity({ createdActivities, registeredActivities, currentUser }) {
     const [filter, setFilter] = useState("All");
 
     const [searchInput, setSearchInput] = useState("");
@@ -41,11 +40,11 @@ export function MyActivity({createdActivities, registeredActivities}) {
             </div>
             <div className="container">
                 <h2 className="text underlined">Activities I've Registered For</h2>
-                <CardList activities={filteredAndSearchedRegisteredActivities} signedUp={true} />
+                <CardList activities={filteredAndSearchedRegisteredActivities} currentUser={currentUser} signedUp={true} />
             </div>
             <div className="container">
                 <h2 className="text underlined my-4">Activities I've Created</h2>
-                <CardList activities={filteredAndSearchedCreatedActivities} signedUp={true} />
+                <CardList activities={filteredAndSearchedCreatedActivities} currentUser={currentUser} signedUp={true} />
             </div>
         </div>
     )

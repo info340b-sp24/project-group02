@@ -24,7 +24,7 @@ function Card(props) {
     )
 }
 
-export function CardList({ activities, signedUp }) {
+export function CardList({ activities, currentUser, signedUp }) {
     if (!activities || activities.length === 0) {
         return <div>No results</div>;
     }
@@ -33,8 +33,11 @@ export function CardList({ activities, signedUp }) {
         activities = Object.values(activities);
     }
 
-    const cardList = activities.map((card, index) => {
-        const element = <Card key={index} activityDetails={card} signedUp={signedUp} />
+    const cardList = activities.filter((activity) => {
+        if (!currentUser?.userName) return true;
+        return activity.name === currentUser.userName;
+    }).map((activity, index) => {
+        const element = <Card key={index} activityDetails={activity} signedUp={signedUp} />
         return element;
     });
 
