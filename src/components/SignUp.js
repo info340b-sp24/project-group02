@@ -63,4 +63,4 @@ export function SignUp({ currentUser }) {
             </form>
         </div>
     );
-}
+}   
