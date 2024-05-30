@@ -70,20 +70,20 @@ function App(props) {
 
       <main>
         <Routes>
-            <Route path="/signin" element={<SignInPage currentUser={currentUser} loginCallback={loginUser} />} />
+          <Route index element={<HomePage currentUser={currentUser} />} />
+          <Route path="/signin" element={<SignInPage currentUser={currentUser} loginCallback={loginUser} />} />
 
+          <Route element={<ProtectedPage currentUser={currentUser} />}>
+            <Route path="/activity" element={<ActivityDetails />} />
+            <Route path="/create-activity" element={<CreateActivity currentUser={currentUser} />} />
+            <Route path="/activity/:name" element={<ActivityDetails />} />
+            <Route path="/sign-up/:activity" element={<SignUp currentUser={currentUser} />} />
+            <Route path="*" element={<Navigate to="/" />} />
             <Route element={<ProtectedPage currentUser={currentUser} />}>
-                <Route index element={<HomePage currentUser={currentUser} />} />
-                <Route path="/activity" element={<ActivityDetails />} />
-                <Route path="/create-activity" element={<CreateActivity currentUser={currentUser} />} />
-                <Route path="/activity/:name" element={<ActivityDetails />} />
-                <Route path="/sign-up/:activity" element={<SignUp currentUser={currentUser} />} />
-                <Route path="*" element={<Navigate to="/" />} />
-                <Route element={<ProtectedPage currentUser={currentUser} />}>
-                    <Route path="/my-activity" element={<MyActivity currentUser={currentUser} createdActivities={createdActivities} registeredActivities={registeredActivities} />} />
-                    <Route path="/profile" element={<ProfilePage currentUser={currentUser} />} />
-                </Route>`
-            </Route>
+              <Route path="/my-activity" element={<MyActivity currentUser={currentUser} createdActivities={createdActivities} registeredActivities={registeredActivities} />} />
+              <Route path="/profile" element={<ProfilePage currentUser={currentUser} />} />
+            </Route>`
+          </Route>
         </Routes>
       </main>
 
