@@ -26,15 +26,11 @@ function App(props) {
 
     onAuthStateChanged(auth, (firebaseUser) => {
       if (firebaseUser) {
-        console.log("signing in as", firebaseUser.displayName);
-        console.log("firebaseuser: ", firebaseUser);
         firebaseUser.userId = firebaseUser.uid;
         firebaseUser.userName = firebaseUser.displayName;
         firebaseUser.userImg = firebaseUser.photoURL || "/img/blank.jpg";
-        console.log("firebaseuser after adding fields: ", firebaseUser);
         setCurrentUser(firebaseUser);
       } else {
-        console.log("signed out");
         setCurrentUser(null);
       }
     });
@@ -61,7 +57,6 @@ function App(props) {
   }, []);
 
   const loginUser = (userObj) => {
-    console.log("logging in as", userObj.userName);
     setCurrentUser(userObj);
 
     if (userObj.userId !== null) {

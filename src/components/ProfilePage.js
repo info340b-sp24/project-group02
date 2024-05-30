@@ -22,19 +22,16 @@ export default function ProfilePage(props) {
 
   const handleImageUpload = async (event) => {
     //upload the file to the storage db
-    console.log("Uploading", imageFile);
     const storage = getStorage();
     const imageRef = ref(storage, "userImages/"+currentUser.userId+".png");
     await uploadBytes(imageRef, imageFile)
 
     const downloadUrlString = await getDownloadURL(imageRef);
-    console.log(downloadUrlString);
 
     await updateProfile(currentUser, { photoURL: downloadUrlString} );
 
     const db = getDatabase();
     const refString = "userData/"+currentUser.userId+"/imgUrl";
-    console.log(refString);
     const userImgRef = dbRef(db, "userData/"+currentUser.userId+"/imgUrl")
     await firebaseSet(userImgRef, downloadUrlString);
 

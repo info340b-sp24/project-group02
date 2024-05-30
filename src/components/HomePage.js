@@ -81,11 +81,11 @@ export function HomePage({ currentUser }) {
             {currentUser?.userId && <>
                 <div className="container">
                     <h2 className="underlined">Created Activities</h2>
-                    <CardList activities={filteredAndSearchedCreatedActivities} signedUp={true} />
+                    <CardList activities={filteredAndSearchedCreatedActivities} currentUser={currentUser} signedUp={true} />
                 </div>
                 <div className="container">
                     <h2 className="underlined">Registered Activities</h2>
-                    <CardList activities={filteredAndSearchedRegisteredActivities} signedUp={true} />
+                    <CardList activities={filteredAndSearchedRegisteredActivities} currentUser={currentUser} signedUp={true} />
                 </div>
             </>}
         </div>

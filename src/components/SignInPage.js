@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { StyledFirebaseAuth } from 'react-firebaseui';
-import { EmailAuthProvider, getAuth } from 'firebase/auth'
+import { getAuth, GoogleAuthProvider } from 'firebase/auth'
 
 
 export default function SignInPage(props) {
@@ -16,7 +16,7 @@ export default function SignInPage(props) {
   const configObj = {
     signInOptions: [
       {
-        provider: EmailAuthProvider.PROVIDER_ID,
+        provider: GoogleAuthProvider.PROVIDER_ID,
         requireDisplayName: true,
       }
     ],
@@ -28,7 +28,7 @@ export default function SignInPage(props) {
   }
 
   return (
-    <div className="card bg-light">
+    <div className="card bg-light mx-auto">
       <div className="container card-body">
         <StyledFirebaseAuth uiConfig={configObj} firebaseAuth={auth} />
 
