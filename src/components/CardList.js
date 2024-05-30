@@ -29,6 +29,7 @@ export function CardList({ activities, signedUp }) {
         return <div>No results</div>;
     }
     if (typeof activities === "object") {
+        // Convert object to array
         activities = Object.values(activities);
     }
 

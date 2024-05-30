@@ -1,15 +1,17 @@
+import { getDatabase, ref, push as firebasePush } from 'firebase/database';
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import SUGGESTED from '../data/suggest.json';
 
 export function SignUp(props) {
 
-// export function SignUp({ addActivity }) {
+    // export function SignUp({ addActivity }) {
     const { activity } = useParams();
     const navigate = useNavigate();
     const [name, setName] = useState('');
     const [phoneNum, setPhoneNum] = useState('');
     const [email, setEmail] = useState('');
+    const [error, setError] = useState("");
 
     // find the activity from the suggested json file
     const selectedActivity = SUGGESTED.find(act => act.activity === activity);
@@ -25,17 +27,24 @@ export function SignUp(props) {
             phoneNum,
             email
         };
-        props.addActivity(actInfo);
-        // addActivity(actInfo);
-        setName('');
-        setPhoneNum('');
-        setEmail('');
-        navigate('/my-activity');
+        const db = getDatabase();
+        const registeredRef = ref(db, "registered");
+        firebasePush(registeredRef, actInfo)
+            .then(() => {
+                setName('');
+                setPhoneNum('');
+                setEmail('');
+                navigate('/my-activity');
+            })
+            .catch((error) => {
+                setError("Activity creation failed: " + error.message);
+            });
     };
 
     return (
         <div>
             <h2>Sign up for {activity}</h2>
+            {error && <div className="alert alert-danger" role="alert">{error}</div>}
             <form onSubmit={handleSubmit}>
                 <div className="bottom-spacing">
                     <label htmlFor="name" className="form-label">Name:</label>

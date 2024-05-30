@@ -33,7 +33,7 @@ export function CreateActivity(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        
+
         if (bannerImage) {
             const storageRefPath = storageRef(storage, `images/${bannerImage.name}`);
             uploadBytes(storageRefPath, bannerImage)
@@ -58,17 +58,24 @@ export function CreateActivity(props) {
             activity: eventName,
             type: type,
             description: description,
-            date: `${date} at ${startTime}`,
+            date: new Date(`${date} ${startTime}`).toLocaleString("en-US", {
+                weekday: "long",
+                month: "long",
+                day: "numeric",
+                hour: "numeric",
+                minute: "numeric",
+                hour12: true,
+            }),
             duration: duration,
             spots: spots,
-            image: imageURL,
+            img: imageURL,
         })
-        .then(() => {
-            navigate("/");
-        })
-        .catch((error) => {
-            setError("Activity creation failed: " + error.message);
-        });
+            .then(() => {
+                navigate("/my-activity");
+            })
+            .catch((error) => {
+                setError("Activity creation failed: " + error.message);
+            });
     };
 
     return (
