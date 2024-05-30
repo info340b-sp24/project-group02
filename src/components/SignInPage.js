@@ -29,8 +29,8 @@ export default function SignInPage(props) {
   return (
     <div className="card bg-light mx-auto">
       <div className="container card-body">
+        <h1 className="text-center fs-2 fw-bolder">Sign In Here:</h1>
         <StyledFirebaseAuth uiConfig={configObj} firebaseAuth={auth} />
-
       </div>
     </div>
   )
