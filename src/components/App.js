@@ -13,7 +13,6 @@ import DEFAULT_USERS from '../data/users.json';
 import { getDatabase, ref, set as firebaseSet, onValue, push as FirebasePush } from 'firebase/database';
 
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
-import { getDatabase, ref } from 'firebase/database';
 
 function App(props) {
     const db = getDatabase();
