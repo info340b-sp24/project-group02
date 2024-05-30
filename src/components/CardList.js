@@ -33,10 +33,15 @@ export function CardList({ activities, currentUser, signedUp }) {
         activities = Object.values(activities);
     }
 
-    const cardList = activities.filter((activity) => {
+    activities = activities.filter((activity) => {
         if (!currentUser?.userId) return true;
         return activity.userId === currentUser.userId;
-    }).map((activity, index) => {
+    });
+    if (activities.length === 0) {
+        return <div>No results</div>;
+    }
+
+    const cardList = activities.map((activity, index) => {
         const element = <Card key={index} activityDetails={activity} signedUp={signedUp} />
         return element;
     });
