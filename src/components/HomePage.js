@@ -1,13 +1,49 @@
-import React, { useState } from 'react';
-import SUGGESTED_DATA from '../data/suggest.json';
-import YOUR_ACTIVITIES from '../data/your_activities.json';
+import React, { useState, useEffect } from 'react';
+import { getDatabase, ref, onValue } from 'firebase/database';
 import { SearchBar } from './SearchBar';
 import { CardList } from './CardList';
 
-export function HomePage({db}) {
+export function HomePage() {
     const [filter, setFilter] = useState("All");
-
     const [searchInput, setSearchInput] = useState("");
+    const [suggestedActivities, setSuggestedActivities] = useState([]);
+    const [createdActivities, setCreatedActivities] = useState([]);
+    const [registeredActivities, setRegisteredActivities] = useState([]);
+
+    useEffect(() => {
+        const db = getDatabase();
+
+        const suggestedRef = ref(db, 'suggested');
+        const createdRef = ref(db, 'created');
+        const registeredRef = ref(db, 'registered');
+
+        onValue(suggestedRef, (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                setSuggestedActivities(Object.values(data));
+            } else {
+                setSuggestedActivities([]);
+            }
+        });
+
+        onValue(createdRef, (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                setCreatedActivities(Object.values(data));
+            } else {
+                setCreatedActivities([]);
+            }
+        });
+
+        onValue(registeredRef, (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                setRegisteredActivities(Object.values(data));
+            } else {
+                setRegisteredActivities([]);
+            }
+        });
+    }, []);
 
     const handleFilterSelect = (selectedFilter) => {
         setFilter(selectedFilter);
@@ -16,7 +52,7 @@ export function HomePage({db}) {
     const handleChange = (event) => {
         const inputtedValue = event.target.value;
         setSearchInput(inputtedValue);
-    }
+    };
 
     const filterActivities = (activities) => {
         if (filter === "All") return activities;
@@ -28,11 +64,12 @@ export function HomePage({db}) {
             return activities.filter(event => event.activity.toLowerCase().includes(searchInput.toLowerCase()));
         } else {
             return activities;
-        };
-    }
+        }
+    };
 
-    const filteredAndSearchedSuggestedActivities = searchActivities(filterActivities(SUGGESTED_DATA));
-    const filteredAndSearchedYourActivities = searchActivities(filterActivities(YOUR_ACTIVITIES));
+    const filteredAndSearchedSuggestedActivities = searchActivities(filterActivities(suggestedActivities));
+    const filteredAndSearchedCreatedActivities = searchActivities(filterActivities(createdActivities));
+    const filteredAndSearchedRegisteredActivities = searchActivities(filterActivities(registeredActivities));
 
     return (
         <div>
@@ -42,8 +79,12 @@ export function HomePage({db}) {
                 <CardList activities={filteredAndSearchedSuggestedActivities} />
             </div>
             <div className="container">
-                <h2 className="underlined">Your Activities</h2>
-                <CardList activities={filteredAndSearchedYourActivities} signedUp={true} />
+                <h2 className="underlined">Created Activities</h2>
+                <CardList activities={filteredAndSearchedCreatedActivities} signedUp={true} />
+            </div>
+            <div className="container">
+                <h2 className="underlined">Registered Activities</h2>
+                <CardList activities={filteredAndSearchedRegisteredActivities} signedUp={true} />
             </div>
         </div>
     );

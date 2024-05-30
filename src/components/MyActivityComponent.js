@@ -19,7 +19,7 @@ export function MyActivity({createdActivities, registeredActivities}) {
 
     const filterActivities = (activities) => {
         if (filter === "All") return activities;
-        return activities.filter(activity => activity.type === filter);
+        return activities.filter(activity => activity.type?.toLowerCase() === filter.toLowerCase());
     };
 
     const searchActivities = (activities) => {
