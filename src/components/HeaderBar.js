@@ -16,7 +16,7 @@ export function Header(props) {
             <Navbar expand="lg" className="bottom-spacing">
                 <Container fluid>
                     <Navbar.Brand className="fs-1 fw-bold">UW Ride With Friends</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="navbar-nav" />
+                    <Navbar.Toggle />
                     <Navbar.Collapse id="navbar-nav flex space-between">
                         <Nav className="me-auto my-2 my-lg-0 navbar-nav-scroll">
                             <NavLink className="nav-link" to="/">Home</NavLink>
