@@ -23,7 +23,7 @@ export function MyActivity({ createdActivities, registeredActivities, currentUse
 
     const searchActivities = (activities) => {
         if (searchInput.length > 0) {
-            return activities.filter(event => event.activity.toLowerCase().includes(searchInput.toLowerCase()));
+            return activities.filter(event => event.activity?.toLowerCase().includes(searchInput.toLowerCase()));
         } else {
             return activities;
         };
@@ -49,4 +49,3 @@ export function MyActivity({ createdActivities, registeredActivities, currentUse
         </div>
     )
 }
-
