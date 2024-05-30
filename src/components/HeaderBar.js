@@ -1,7 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
 import { getAuth, signOut } from 'firebase/auth';
 
 
@@ -20,15 +19,9 @@ export function Header(props) {
                     <Navbar.Toggle aria-controls="navbar-nav" />
                     <Navbar.Collapse id="navbar-nav flex space-between">
                         <Nav className="me-auto my-2 my-lg-0 navbar-nav-scroll">
-                            <LinkContainer to="/">
-                                <Nav.Link>Home</Nav.Link>
-                            </LinkContainer>
-                            <LinkContainer to="/my-activity">
-                                <Nav.Link>My Activity</Nav.Link>
-                            </LinkContainer>
-                            <LinkContainer to="/create-activity">
-                                <Nav.Link>Create An Activity</Nav.Link>
-                            </LinkContainer>
+                            <NavLink className="nav-link" to="/">Home</NavLink>
+                            <NavLink className="nav-link" to="/my-activity">My Activity</NavLink>
+                            <NavLink className="nav-link" to="/create-activity">Create An Activity</NavLink>
                         </Nav>
                         {currentUser.userId &&
                             <>

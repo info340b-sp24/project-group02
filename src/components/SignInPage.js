@@ -6,7 +6,6 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth'
 
 export default function SignInPage(props) {
   const currentUser = props.currentUser;
-  const loginCallback = props.loginCallback;
 
   const auth = getAuth();
 
