@@ -25,12 +25,15 @@ function Card(props) {
 }
 
 export function CardList({ activities, signedUp }) {
-    if (activities.length === 0) {
+    if (!activities || activities.length === 0) {
         return <div>No results</div>;
     }
+    if (typeof activities === "object") {
+        activities = Object.values(activities);
+    }
 
-    const cardList = activities.map((card) => {
-        const element = <Card key={card.activity} activityDetails={card} signedUp={signedUp} />
+    const cardList = activities.map((card, index) => {
+        const element = <Card key={index} activityDetails={card} signedUp={signedUp} />
         return element;
     });
 

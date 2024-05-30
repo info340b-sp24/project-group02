@@ -33,7 +33,6 @@ export function MyActivity( {registeredActivities} ) {
     const filteredAndSearchedRegisteredActivities = searchActivities(filterActivities(registeredActivities));
     const filteredAndSearchedCreatedActivities = searchActivities(filterActivities(CREATED_ACTIVITIES));
 
-
     return (
         <div>
             <div className="container-fluid text-black bg-light py-3">
