@@ -10,17 +10,16 @@ import SignInPage from './SignInPage.js';
 import REGISTERED_ACTIVITIES from '../data/registered_activities.json';
 import ProfilePage from './ProfilePage.js';
 import DEFAULT_USERS from '../data/users.json';
+import { getDatabase, ref, set as firebaseSet, onValue, push as FirebasePush } from 'firebase/database';
 
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
 function App(props) {
     const db = getDatabase();
-
     const registeredRef = ref(db, "registered");
-    console.log(registeredRef);
     // activities signed up for
-    // const [registeredActivities, setRegisteredActivities] = useState(REGISTERED_ACTIVITIES);
     const [registeredActivities, setRegisteredActivities] = useState(registeredRef);
+
     // add activity to registered
     const addActivity = (activity) => {
         setRegisteredActivities(registeredActivities => [...registeredActivities, activity]);
