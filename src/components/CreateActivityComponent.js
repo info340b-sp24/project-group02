@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ref, push as firebasePush, getDatabase } from 'firebase/database';
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
 
-export function CreateActivity(props) {
+export function CreateActivity({ currentUser }) {
     const navigate = useNavigate();
     const db = getDatabase();
     const storage = getStorage();
@@ -69,6 +69,7 @@ export function CreateActivity(props) {
             duration: duration,
             spots: spots,
             img: imageURL,
+            userId: currentUser.userId,
         })
             .then(() => {
                 navigate("/my-activity");

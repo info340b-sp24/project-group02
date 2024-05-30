@@ -72,10 +72,10 @@ function App(props) {
         <Routes>
           <Route index element={<HomePage currentUser={currentUser} />} />
           <Route path="/activity" element={<ActivityDetails />} />
-          <Route path="/create-activity" element={<CreateActivity />} />
+          <Route path="/create-activity" element={<CreateActivity currentUser={currentUser} />} />
           <Route path="/activity/:name" element={<ActivityDetails />} />
           <Route path="/signin" element={<SignInPage currentUser={currentUser} loginCallback={loginUser} />} />
-          <Route path="/sign-up/:activity" element={<SignUp />} />
+          <Route path="/sign-up/:activity" element={<SignUp currentUser={currentUser} />} />
           <Route path="*" element={<Navigate to="/" />} />
           <Route element={<ProtectedPage currentUser={currentUser} />}>
             <Route path="/my-activity" element={<MyActivity currentUser={currentUser} createdActivities={createdActivities} registeredActivities={registeredActivities} />} />
