@@ -25,6 +25,7 @@ export function SignUp({ currentUser }) {
             phoneNum,
             email,
             userId: currentUser.userId,
+            type: selectedActivity.type,
         };
         const db = getDatabase();
         const registeredRef = ref(db, "registered");
