@@ -11,6 +11,7 @@ export function SignUp({ currentUser }) {
     const [email, setEmail] = useState('');
     const [error, setError] = useState("");
 
+
     // find the activity from the suggested json file
     const selectedActivity = SUGGESTED.find(act => act.activity === activity);
 
@@ -39,6 +40,7 @@ export function SignUp({ currentUser }) {
             .catch((error) => {
                 setError("Activity creation failed: " + error.message);
             });
+
     };
 
     return (

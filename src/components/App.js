@@ -70,7 +70,7 @@ function App(props) {
 
       <main>
         <Routes>
-          <Route index element={<HomePage currentUser={currentUser} />} />
+          <Route index element={<HomePage currentUser={currentUser}/>} />
           <Route path="/signin" element={<SignInPage currentUser={currentUser} loginCallback={loginUser} />} />
 
           <Route element={<ProtectedPage currentUser={currentUser} />}>

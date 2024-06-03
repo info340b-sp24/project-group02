@@ -76,7 +76,7 @@ export function HomePage({ currentUser }) {
             <SearchBar onFilterSelect={handleFilterSelect} handleChange={handleChange} value={searchInput} />
             <div className="container">
                 <h2 className="underlined">Suggested</h2>
-                <CardList activities={filteredAndSearchedSuggestedActivities} />
+                <CardList activities={filteredAndSearchedSuggestedActivities} signedUp={false}/>
             </div>
             {currentUser?.userId && <>
                 <div className="container">
